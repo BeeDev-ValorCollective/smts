@@ -5,3 +5,5 @@
 - [Fathom Notes Folder](https://drive.google.com/drive/folders/1S1xFaIwhg9A4ZIuGKw7vESvRJ7MxsoJY?usp=drive_link)
 - [Main Folder](https://drive.google.com/drive/folders/18Y_2Z7UfV-GAv6wyj3JzywH5TGiOHXDu?usp=drive_link)
 - [Preview Link](https://valor-22.beedev-services.com/)
+- [Assets Folder](https://docs.google.com/document/d/1_f1q2RabQUFeESwZBRCeE1CBxngIwwYcFn73IjA0oc8/edit?tab=t.0)
+- [Email Chain](https://docs.google.com/document/d/1_f1q2RabQUFeESwZBRCeE1CBxngIwwYcFn73IjA0oc8/edit?tab=t.0)
