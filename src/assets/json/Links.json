@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "url": "/home",
+        "name": "Home",
+        "meta": {
+            "title": "Seniors Mobile Tax Services",
+            "description": "",
+            "keywords": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogImage": "",
+            "ogUrl": ""
+        }
+    },
+    {
+        "id": 2,
+        "url": "/services",
+        "name": "Services",
+                "meta": {
+            "title": "Services - SMTS",
+            "description": "",
+            "keywords": "",
+            "ogTitle": "Services - SMTS",
+            "ogDescription": "",
+            "ogImage": "",
+            "ogUrl": ""
+        }
+    },
+    {
+        "id": 3,
+        "url": "/contact",
+        "name": "Contact",
+                "meta": {
+            "title": "Contact - SMTS",
+            "description": "",
+            "keywords": "",
+            "ogTitle": "Contact - SMTS",
+            "ogDescription": "",
+            "ogImage": "",
+            "ogUrl": ""
+        }
+    },
+    {
+        "id": 4,
+        "url": "/aboutus",
+        "name": "About Us",
+                "meta": {
+            "title": "About Us - SMTS",
+            "description": "",
+            "keywords": "",
+            "ogTitle": "About Us - SMTS",
+            "ogDescription": "",
+            "ogImage": "",
+            "ogUrl": ""
+        }
+    }
+]

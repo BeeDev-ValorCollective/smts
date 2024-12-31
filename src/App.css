@@ -1,42 +1,341 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* MAIN STYLES PAGE */
+
+/* IMPORT FONTS HERE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); /* Import is correctly placed */
+
+/* DEFINE GLOBAL VARIABLES */
+:root {
+  --base: 16px;
+  --red: #D2253F;
+  --white: #E5D5D5;
+  --blue: #3C3B6E;
+  --black: #0D1F2D;
+  --background: #E5D5D5;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* STYLE RESET */
+html, body, * {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-family: 'Poppins', sans-serif;
+  word-spacing: .097rem;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* FONT SIZE VARIALBE - this will be used if we add in accessability features such as 'larger text' */
+html {
+  font-size: var(--base);
+}
+
+/* FLEXIBLE CONTENT WRAPPER - This sets up the flex grow in the 'main' component */
+.app_wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*                        */
+/* STANDARDIZE FONT SIZES */
+/*                        */
+h1, h2, h3, h4, h5, h6, p, a {
+  transition: all 300ms ease;
+  color: var(--black);
+}
+
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.1rem; }
+h4 { font-size: 1.0rem; }
+h5 { font-size: 0.9rem; }
+p { font-size: 0.85rem; }
+
+a {
+  font-size: 0.85rem;
+  
+  &:hover {
+    color: var(--blue);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* SCREEN SIZES ABOVE 500 */
+@media (min-width: 500px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.375rem; }
+  h4 { font-size: 1.125rem; }
+  h5 { font-size: 1rem; }
+  p { font-size: 1.1rem; }
+  a { font-size: 1.1rem; }
+}
+
+/* SCREEN SIZES ABOVE 500 */
+@media (min-width: 1200px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.58rem; }
+  h4 { font-size: 1.295rem; }
+  p { font-size: 1.265rem; }
+  a { font-size: 1.265rem; }
+}
+/*                            */
+/* END STANDARDIZE FONT SIZES */
+/*                            */
+
+
+
+/*                      */
+/* VISABILITY UTILITIES */
+/*                      */
+
+/* Hides mobile-specific elements on larger screens */
+@media only screen and (min-width: 560px) {
+  .mobile_only {
+    display: none !important; 
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Hides desktop-specific elements on small screens */
+@media only screen and (max-width: 559px) {
+  .desktop_only {
+    display: none !important; 
   }
 }
+/*                          */
+/* END VISABILITY UTILITIES */
+/*                          */
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
+
+/*                           */
+/* REUSABLE COMPONENTS STYLE */
+/*                           */
+
+/* BUTTON COMPONENT */
+  .button_box {
+    margin: 16px;
+    
+    button {
+      width: 120px;
+      height: 50px;
+      padding: 8px 12px;
+      
+      
+      &:hover {filter: brightness(1.2);}
+    }
+  }
+  .button_default {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--red);
+  }
+  
+  .button_red {
+    background-color: var(--red);
+    color: var(--white);
+    border: 2px solid var(--blue);
+  }
+  
+  .button_white {
+    background-color: var(--white);
+    color: var(--blue);
+    border: 2px solid var(--red);
+  }
+  
+  .button_blue {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--red);
+  }
+
+/* END BUTTON */
+
+
+/* MORE REUSABLE COMPONENT STYLES HERE */
+
+
+/*                               */
+/* END REUSABLE COMPONENTS STYLE */
+/*                               */
+
+
+
+/*                   */
+/* NAVIGATION STYLES */
+/*                   */
+nav {
+  height: 120px;
+  padding: 0 16px;
+  background-color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .nav_header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+    img {
+      height: 80px;
+      background-color: var(--white);
+      border-radius: 50%;
+      padding: 2px;
+    }
+    
+    h1 {
+      color: var(--white);
+    }
+  }
+  
+  .nav_links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 12px;
+      
+      a {
+        color: var(--white);
+        
+        &:hover {
+          color: red;
+        }
+      }
+    }
+    
+    p {
+      font-size: 0.65rem;
+      text-align: end;
+      color: var(--white);
+    }
+  }
 }
+/*                       */
+/* END NAVIGATION STYLES */
+/*                       */
+
+
+
+/*                  */
+/* MAIN VIEW STYLES */
+/*                  */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 36px 0;
+  margin: 0px auto;
+  background-color: var(--background);
+}
+/*                      */
+/* END MAIN VIEW STYLES */
+/*                      */
+
+
+
+/*               */
+/* FOOTER STYLES */
+/*               */
+footer {
+  padding: 0 16px;
+  height: 110px;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  a {
+    color: var(--white);
+    
+    &:hover {
+      color: red;
+    }
+  }
+  
+  img {
+    height: 80px;
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 2px;
+  }
+}
+/*                   */
+/* END FOOTER STYLES */
+/*                   */
+
+
+
+/*                 */
+/* HOME PAGE STYLE */
+/*                 */
+
+/* HOME PAGE STYLES HERE - delete if not needed */
+
+/*                     */
+/* END HOME PAGE STYLE */
+/*                     */
+
+
+
+/*                     */
+/* SERVICES PAGE STYLE */
+/*                     */
+
+/* SERVICES PAGE STYLES HERE - delete if not needed */
+
+/*                         */
+/* END SERVICES PAGE STYLE */
+/*                         */
+
+
+
+/*                    */
+/* CONTACT PAGE STYLE */
+/*                    */
+
+/* CONTACT PAGE STYLES HERE - delete if not needed */
+
+/*                        */
+/* END CONTACT PAGE STYLE */
+/*                        */
+
+
+
+
+/*                  */
+/* ABOUT PAGE STYLE */
+/*                  */
+
+/* ABOUT PAGE STYLES HERE - delete if not needed */
+
+/*                      */
+/* END ABOUT PAGE STYLE */
+/*                      */
+
+
+
+/*                  */
+/* ERROR PAGE STYLE */
+/*                  */
+
+/* ERROR PAGE STYLES HERE - delete if not needed */
+
+/*                      */
+/* END ERROR PAGE STYLE */
+/*                      */
