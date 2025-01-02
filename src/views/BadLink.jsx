@@ -1,7 +1,7 @@
 // BAD LINK VIEW PAGE
 
 // IMPORT SUBCOMPONENTS
-import Button from "../components/ReusableComponents/Button";
+import Button from "../components/ReusableComponents/ButtonComponent/Button";
 
 // IMPORT IMAGES
 import SMTSIcon from "../assets/images/SMTS_Icon_noBG.png"

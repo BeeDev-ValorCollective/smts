@@ -1,7 +1,7 @@
 // ABOUT VIEW PAGE
 
 // IMPORT SUBCOMPONENTS
-import Button from "../components/ReusableComponents/Button";
+import Button from "../components/ReusableComponents/ButtonComponent/Button";
 
 export default function About() {
     

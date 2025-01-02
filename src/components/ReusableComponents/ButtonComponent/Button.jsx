@@ -1,5 +1,8 @@
 // BUTTON COMPONTENT //
-// Uses input on its rendering page that are passed down to populate 'text', 'to' and 'button color'
+// Pass down  'text', 'to' and 'button color' to populate. 
+// If not color is provided, a default style will be used
+
+import './button.css'
 
 // IMPORT REACT MAGIC
 import { Link } from "react-router-dom";

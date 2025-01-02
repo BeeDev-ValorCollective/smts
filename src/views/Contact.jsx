@@ -2,7 +2,7 @@
 // This page will utilize the node backend to perform on page mailing functions
 
 // IMPORT SUBCOMPONENTS
-import Button from "../components/ReusableComponents/Button";
+import Button from "../components/ReusableComponents/ButtonComponent/Button";
 
 export default function Contact() {
     

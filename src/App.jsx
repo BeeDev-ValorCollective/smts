@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-route
 import './App.css'
 
 // IMPORT VIEWS (Lazy load for speed)
-const Index = React.lazy(() => import('./views/Index'));
+const Index = React.lazy(() => import('./views/Home'));
 const Services = React.lazy(() => import('./views/Services'));
 const Contact = React.lazy(() => import('./views/Contact'));
 const About = React.lazy(() => import('./views/About'));
