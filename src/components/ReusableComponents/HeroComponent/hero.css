@@ -1,0 +1,39 @@
+
+/* HERO SECTION */
+.home_hero {
+    img {
+        width: 100dvw;
+        height: 100px;
+        opacity: .5;
+    }
+    
+    h1 {
+        position: relative;
+        top: -100px;
+        text-align: center;
+        line-height: 2rem;
+        text-shadow: 0 0 5px #fff;
+    }
+    
+    p {
+        position: relative;
+        top: -105px;
+        left: 15%;
+        text-align: center;
+        font-weight: 700;
+        text-shadow: 0 0 5px #fff;
+    }
+}
+
+@media only screen and (min-width: 559px) {
+    .home_hero {
+        h1 {
+            top:-82px
+        }
+        p {
+            top: -87px;
+            left: 20%;
+        }
+    }
+}
+/* END HERO SECTION */

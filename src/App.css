@@ -1,4 +1,6 @@
 /* MAIN STYLES PAGE */
+/* This style page holds the root styles, fonts, body, main and footer/nav styles */
+/* ALL other styles will be imported into their sub components */
 
 /* IMPORT FONTS HERE */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); /* Import is correctly placed */
@@ -44,6 +46,20 @@ html {
   min-height: 100vh;
 }
 
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0px auto;
+  background-color: var(--background);
+  overflow-x: hidden;
+}
+
+
+
 /*                        */
 /* STANDARDIZE FONT SIZES */
 /*                        */
@@ -78,7 +94,7 @@ a {
   a { font-size: 1.1rem; }
 }
 
-/* SCREEN SIZES ABOVE 500 */
+/* SCREEN SIZES ABOVE 1200 */
 @media (min-width: 1200px) {
   h1 { font-size: 2.8rem; }
   h2 { font-size: 2rem; }
@@ -113,59 +129,6 @@ a {
 /*                          */
 /* END VISABILITY UTILITIES */
 /*                          */
-
-
-
-/*                           */
-/* REUSABLE COMPONENTS STYLE */
-/*                           */
-
-/* BUTTON COMPONENT */
-  .button_box {
-    margin: 16px;
-    
-    button {
-      width: 120px;
-      height: 50px;
-      padding: 8px 12px;
-      
-      
-      &:hover {filter: brightness(1.2);}
-    }
-  }
-  .button_default {
-    background-color: var(--blue);
-    color: var(--white);
-    border: 2px solid var(--red);
-  }
-  
-  .button_red {
-    background-color: var(--red);
-    color: var(--white);
-    border: 2px solid var(--blue);
-  }
-  
-  .button_white {
-    background-color: var(--white);
-    color: var(--blue);
-    border: 2px solid var(--red);
-  }
-  
-  .button_blue {
-    background-color: var(--blue);
-    color: var(--white);
-    border: 2px solid var(--red);
-  }
-
-/* END BUTTON */
-
-
-/* MORE REUSABLE COMPONENT STYLES HERE */
-
-
-/*                               */
-/* END REUSABLE COMPONENTS STYLE */
-/*                               */
 
 
 
@@ -229,26 +192,6 @@ nav {
 
 
 
-/*                  */
-/* MAIN VIEW STYLES */
-/*                  */
-main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  padding: 36px 0;
-  margin: 0px auto;
-  background-color: var(--background);
-}
-/*                      */
-/* END MAIN VIEW STYLES */
-/*                      */
-
-
-
 /*               */
 /* FOOTER STYLES */
 /*               */
@@ -278,64 +221,3 @@ footer {
 /*                   */
 /* END FOOTER STYLES */
 /*                   */
-
-
-
-/*                 */
-/* HOME PAGE STYLE */
-/*                 */
-
-/* HOME PAGE STYLES HERE - delete if not needed */
-
-/*                     */
-/* END HOME PAGE STYLE */
-/*                     */
-
-
-
-/*                     */
-/* SERVICES PAGE STYLE */
-/*                     */
-
-/* SERVICES PAGE STYLES HERE - delete if not needed */
-
-/*                         */
-/* END SERVICES PAGE STYLE */
-/*                         */
-
-
-
-/*                    */
-/* CONTACT PAGE STYLE */
-/*                    */
-
-/* CONTACT PAGE STYLES HERE - delete if not needed */
-
-/*                        */
-/* END CONTACT PAGE STYLE */
-/*                        */
-
-
-
-
-/*                  */
-/* ABOUT PAGE STYLE */
-/*                  */
-
-/* ABOUT PAGE STYLES HERE - delete if not needed */
-
-/*                      */
-/* END ABOUT PAGE STYLE */
-/*                      */
-
-
-
-/*                  */
-/* ERROR PAGE STYLE */
-/*                  */
-
-/* ERROR PAGE STYLES HERE - delete if not needed */
-
-/*                      */
-/* END ERROR PAGE STYLE */
-/*                      */

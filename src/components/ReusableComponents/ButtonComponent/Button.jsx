@@ -1,6 +1,8 @@
 // BUTTON COMPONTENT //
 // Uses input on its rendering page that are passed down to populate 'text', 'to' and 'button color'
 
+import './button.css'
+
 // IMPORT REACT MAGIC
 import { Link } from "react-router-dom";
 
