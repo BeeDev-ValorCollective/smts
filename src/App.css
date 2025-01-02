@@ -9,10 +9,10 @@
 :root {
   --base: 16px;
   --red: #D2253F;
-  --white: #E5D5D5;
+  --white: #EDEDED;
   --blue: #3C3B6E;
   --black: #0D1F2D;
-  --background: #E5D5D5;
+  --background: #EDEDED;
 }
 
 /* STYLE RESET */
