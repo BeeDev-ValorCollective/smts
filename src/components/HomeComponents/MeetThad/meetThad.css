@@ -1,0 +1,33 @@
+
+/* MEET THAD SECTION */
+
+.meet_thad {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        height: 200px;
+        width: 200px;
+        border: 2px solid var(--blue);
+        border-radius: 50%;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    p {
+        max-width: 700px;
+        padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 559px) {
+    .meet_thad {
+        flex-direction: row;
+        gap: 36px;
+    }
+}
