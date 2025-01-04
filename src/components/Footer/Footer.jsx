@@ -14,18 +14,30 @@ export default function Footer({ currentPath }) {
     
     return(
         <footer>
-            <ul>
-                {Links
-                    // filter out the path of the current view page
-                    .filter(link => link.url !== currentPath)
-                    .map(link => (
-                        <li key={ link.id }>
-                            <Link to={ link.url }>
-                                { link.name }
-                            </Link>
-                        </li>
-                    ))}
-            </ul>
+            <div className="footer_hidden_div">I'm A hidden element</div>
+            <div className="footer_links_container">
+                <ul>
+                    {Links
+                        // filter out the path of the current view page
+                        .filter(link => link.url !== currentPath)
+                        .map(link => (
+                            <li key={ link.id }>
+                                <Link to={ link.url }>
+                                    { link.name }
+                                </Link>
+                            </li>
+                        ))}
+                </ul>
+                <hr />
+                <ul>
+                    <li>
+                        <p>Built By:</p>
+                    </li>
+                    <li>
+                        <a href="https://beedev-services.com/" target="_blank" rel="noopener noreferrer">BeeDev-Services</a>
+                    </li>
+                </ul>
+            </div>
             <img src={ FooterIcon } alt="SMTS Icon" />
         </footer>
     );
