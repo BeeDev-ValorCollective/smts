@@ -11,7 +11,7 @@
   --red: #aa2b34;
   --white: #DDDDE0;
   --blue: #3C3B6E;
-  --black: #0D1F2D;
+  --black: #3C3B6E;
   --background: #DDDDE0
 }
 
@@ -188,12 +188,12 @@ nav {
   }
 }
 
-
 @media only screen and (max-width: 770px) {
   .nav_header h1 {
     display: none !important; 
   }
 }
+
 @media only screen and (min-width: 980px) {
   .nav_header br {
     display: none !important; 
@@ -230,7 +230,7 @@ footer {
     gap: 4px;
     width: 330px;
     margin: 0 auto;
-
+    
     
     a {
       color: var(--white);
@@ -245,7 +245,7 @@ footer {
       align-items: center;
       justify-content: center;
       gap: 36px;
-
+      
       li {
         line-height: 100%;
       }
@@ -297,7 +297,6 @@ footer {
     .footer_links_container {
       gap: 8px;
     }
-
   }
 }
 
@@ -308,4 +307,4 @@ footer {
 }
   /*                   */
   /* END FOOTER STYLES */
-/*                   */
+  /*                   */
