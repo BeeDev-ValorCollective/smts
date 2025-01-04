@@ -8,11 +8,11 @@
 /* DEFINE GLOBAL VARIABLES */
 :root {
   --base: 16px;
-  --red: #B64249;
-  --white: #EDEDED;
+  --red: #aa2b34;
+  --white: #DDDDE0;
   --blue: #3C3B6E;
   --black: #0D1F2D;
-  --background: #EDEDED;
+  --background: #DDDDE0
 }
 
 /* STYLE RESET */
@@ -157,6 +157,7 @@ nav {
     
     h1 {
       color: var(--white);
+      line-height: 100%;
     }
   }
   
@@ -184,6 +185,17 @@ nav {
       text-align: end;
       color: var(--white);
     }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .nav_header h1 {
+    display: none !important; 
+  }
+}
+@media only screen and (min-width: 950px) {
+  .nav_header br {
+    display: none !important; 
   }
 }
 /*                       */
