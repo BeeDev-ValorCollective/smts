@@ -7,12 +7,12 @@ export default function WaysWeHelp() {
         <div className='ways_we_help'>
             {/* Title */}
             <h2>
-                Ways We Can Help You All Year Long
+                We Can Help You All Year Long
             </h2>
             {/* Sub Title */}
-            <h5>
-                SMTS offers year-round support, from tax preparation and ITIN applications to notary services and tax planning guidance.
-            </h5>
+            {/* <h5>
+                Year-round support, from tax preparation and ITIN applications to notary services and tax planning guidance.
+            </h5> */}
             {/* Box Container */}
             <div className='ways_we_help_box_wrapper'>
                 {/* BOX1 */}

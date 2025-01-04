@@ -1,10 +1,10 @@
 // IMPORT STYLES
 import './WhatMakesUsDifferent.css'
 
-// IMPORT ICONS
-import { FaCar } from "react-icons/fa";
-import { HiLightBulb } from "react-icons/hi";
-import { GiMagnifyingGlass } from "react-icons/gi";
+// IMPORT IMAGES
+import Car from "../../../assets/images/car_icon.png"
+import Lightbulb from "../../../assets/images/light_bulb.png"
+import Magnifying from "../../../assets/images/magnifying_glass.png"
 
 
 export default function WhatMakesUsDifferent() {
@@ -20,7 +20,7 @@ export default function WhatMakesUsDifferent() {
                 {/* BOX1 */}
                 <div className='home_box'>
                     <div className='box_title'>
-                        <FaCar />
+                        <img src={ Car } alt="car icon" />
                         <h3>
                             Mobile Convergence Service
                         </h3>
@@ -34,7 +34,7 @@ export default function WhatMakesUsDifferent() {
                 {/* BOX2 */}
                 <div className='home_box'>
                     <div className='box_title'>
-                        <HiLightBulb />
+                        <img src={ Lightbulb } alt="lightbulb icon" />
                         <h3>
                             STRESS-FREE PROCESS
                         </h3>
@@ -48,7 +48,7 @@ export default function WhatMakesUsDifferent() {
                 {/* BOX3 */}
                 <div className='home_box'>
                     <div className='box_title'>
-                        <GiMagnifyingGlass />
+                        <img src={ Magnifying } alt="Magnifying Glass Icon" />
                         <h3>
                             SPECIALIZED SERVICES
                         </h3>

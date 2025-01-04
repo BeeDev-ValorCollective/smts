@@ -2,14 +2,16 @@
 /* MEET THAD SECTION */
 
 .meet_thad {
-    margin: 24px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 24px;
+    margin: 24px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     
     img {
-        margin: 16px 0;
+        margin: 16px;
         height: 200px;
         width: 200px;
         border: 8px double var(--blue);
@@ -18,6 +20,7 @@
     
     h2 {
         text-align: center;
+        padding: 0 16px;
     }
     
     p {
@@ -26,9 +29,12 @@
     }
 }
 
-@media only screen and (min-width: 559px) {
+@media only screen and (min-width: 675px) {
     .meet_thad {
+        margin: 48px 0;
         flex-direction: row;
-        gap: 36px;
+        justify-content: space-between;
+
+        /* gap: 36px; */
     }
 }
