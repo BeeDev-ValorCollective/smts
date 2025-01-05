@@ -17,7 +17,11 @@ export default function Navbar({ currentPath }) {
         <nav>
             <div className="nav_header">
                 <img src={ NavIcon } alt="SMTS Logo" />
-                <h1 className="desktop_only">SMTS</h1>
+                <h1>
+                    Seniors Mobile 
+                    <br />
+                    Tax Service
+                </h1>
             </div>
             <div className="nav_links">
                 <ul>

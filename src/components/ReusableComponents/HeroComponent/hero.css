@@ -1,6 +1,7 @@
-
 /* HERO SECTION */
 .home_hero {
+    height: 100px;
+    
     img {
         width: 100dvw;
         height: 100px;
