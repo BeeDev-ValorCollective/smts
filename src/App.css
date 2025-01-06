@@ -228,9 +228,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    width: 330px;
-    margin: 0 auto;
-    
     
     a {
       color: var(--white);
