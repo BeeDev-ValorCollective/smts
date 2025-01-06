@@ -1,0 +1,90 @@
+/* Scroll Up Style */
+
+.scroll_up {
+    position: fixed;
+    top: calc(100dvh - 325px);
+    right: 8px;
+    height: 35px;
+    width: 35px;
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--red);
+    border-radius: 6px;
+    z-index: 100001;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 250ms ease;
+    padding: 0;
+    
+    &:hover {
+        width: 80px;
+    }
+    
+    svg {
+        position: absolute;
+        top: 6.5px;
+        right: 6.5px;
+        font-size: 20px;
+    }
+}
+
+.scroll_up_text {
+    position: absolute;
+    left: 60px;
+    top: 15%;
+    opacity: 0;
+    white-space: nowrap;
+    margin-left: 8px;
+    transition: opacity 1000ms ease, transform 400ms ease;
+    font-size: 0.7rem;
+    line-height: 100%;
+    visibility: hidden;
+}
+
+.scroll_up:hover .scroll_up_text {
+    opacity: 1;
+    visibility:visible;
+    transform: translateX(-60px);
+    color: var(--white);
+}
+
+@media screen and (min-width: 500px) {
+    .scroll_up {
+        height: 40px;
+        width: 40px;
+        
+        &:hover {
+            width: 90px;
+        }
+        svg {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 27px;
+        }
+    }
+    .scroll_up_text {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (min-width: 870px) {
+    .scroll_up {
+        height: 50px;
+        width: 50px;
+        right: 23.5px;
+        
+        &:hover {
+            width: 100px;
+        }
+        svg {
+            position: absolute;
+            top: 6.5px;
+            right: 6.5px;
+            font-size: 35px;
+        }
+    }
+    .scroll_up_text {
+        font-size: 0.95rem;
+    }
+}
