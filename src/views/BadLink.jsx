@@ -12,7 +12,7 @@ export default function Contact() {
         <main>
             <h1>404 page not found</h1>
             <img src={SMTSIcon} alt="" />
-            <Button to="/" text="Home" color="red" />
+            <Button to="/" text="Home" color="blue" />
         </main>
     );
 };
