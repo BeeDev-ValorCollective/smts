@@ -19,8 +19,16 @@ export default function MeetThad() {
             <img src={userIcon} alt="Meet Thad" />
             <div>
                 <h2>
-                    Thad A. Jones
+                    Thad A. Jones -&nbsp;
+                    <br className="mobile_only" />
+                    EA, CAA & Notary
                 </h2>
+                <h4>
+                    Founder & Owner
+                </h4>
+                <h5>
+                    Veteran Owned & Operated Business
+                </h5>
                 <p>
                     With over 16 years of experience in tax preperation he is dedicated to providing expert and reliable tax services. As a proud member of the Virginia Society of Enrolled Agents and the National Enrolled Agents Association, he has successfully assisted hundres of clients, including processing over 200 ITINs since 2016.
                 </p>
