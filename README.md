@@ -7,3 +7,4 @@
 - [Preview Link](https://valor-22.beedev-services.com/)
 - [Assets Folder](https://docs.google.com/document/d/1_f1q2RabQUFeESwZBRCeE1CBxngIwwYcFn73IjA0oc8/edit?tab=t.0)
 - [Email Chain](https://docs.google.com/document/d/1_f1q2RabQUFeESwZBRCeE1CBxngIwwYcFn73IjA0oc8/edit?tab=t.0)
+- [ENV](https://docs.google.com/document/d/1_27n8rQDhthuaebwt02ltBHBi65yTvKtranNhpf-lmE/edit?usp=sharing)
