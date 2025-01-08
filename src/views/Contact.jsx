@@ -2,15 +2,22 @@
 // This page will utilize the node backend to perform on page mailing functions
 
 // IMPORT SUBCOMPONENTS
-import Button from "../components/ReusableComponents/ButtonComponent/Button";
+import ContactForm from "../components/ContactComponents/ContactForm/ContactForm";
+import ContactHeader from "../components/ContactComponents/ContactHeader/ContactHeader";
+import HomeHero from "../components/ReusableComponents/HeroComponent/Hero";
+
+// Import Custom Hooks
+import useScrollToTop from "../customHooks/useScrollToTop";
 
 export default function Contact() {
     
+    useScrollToTop();
+
     return(
         <main>
-            <h1>TEST Contact Page</h1>
-            <h3>This is a test...</h3>
-            <Button to="/" text="Home" color="white" />
+            <HomeHero Title1="Contact Us" />
+            <ContactHeader />
+            <ContactForm />
         </main>
     );
 };

@@ -15,6 +15,7 @@ const BadLink = React.lazy(() => import('./views/BadLink'));
 // IMPORT COMPONENTS
 import NavBar from './components/NavBar/Navbar';
 import Footer from './components/Footer/Footer';
+import ScrollUpButton from './components/ScrollUpComponent/ScrollUp';
 
 // Import custom hooks
 import useLoadMetaData from './customHooks/useLoadMetaData';
@@ -26,7 +27,7 @@ function App() {
     <BrowserRouter>
       <Suspense 
         // this can be replaced with a spinner or something more exciting at some point
-        fallback={<div>Loading...</div>}
+        fallback={ <BadLink /> }
       >
         <AppContent />
       </Suspense>
@@ -34,7 +35,6 @@ function App() {
   );
 }
 
-// 
 function AppContent() {
 
     // Fetch metadata from custom hook
@@ -107,6 +107,9 @@ function AppContent() {
         />
 
       </Routes>
+
+      {/* GO TO TOP COMPONENT */}
+      <ScrollUpButton />
 
       {/* FOOTER COMPONENT */}
       <Footer 

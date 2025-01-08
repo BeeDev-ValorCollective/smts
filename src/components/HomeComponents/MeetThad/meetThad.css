@@ -18,10 +18,15 @@
         border-radius: 50%;
     }
     
-    h2 {
+    h2, h4, h5 {
         text-align: center;
         padding: 0 16px;
     }
+
+    h2 {
+        line-height: 100%;
+    }
+
     
     p {
         max-width: 650px;
@@ -34,7 +39,5 @@
         margin: 48px 0;
         flex-direction: row;
         justify-content: space-between;
-
-        /* gap: 36px; */
     }
 }
