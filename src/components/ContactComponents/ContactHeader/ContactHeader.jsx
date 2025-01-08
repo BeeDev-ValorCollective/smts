@@ -9,13 +9,15 @@ export default function ContactHeader() {
     return(
         <>
             <div className='contact_header'>
-                <img src={ Phone_Icon } alt="Call Us" />
                 <h2>
-                    TEST CONTACT HEADER
+                    Get In Touch
                 </h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi culpa minus, provident amet ad assumenda dignissimos totam deleniti nemo? Nihil ipsa similique ut. Officia, autem? Facilis debitis quos cupiditate odio!
+                    For reliable and convenient tax services, contact Thad at Seniors Mobile Tax Services LLC. Call today to schedule your appointment or ask any questions you may have—Thad is here to help!
                 </p>
+                <img src={ Phone_Icon } alt="Call Us" />
+                <h3>PHONE</h3>
+                <h4>(804) 986-2425</h4>
             </div>
             <div className="message_hr">
                 <hr />
