@@ -1,12 +1,16 @@
-.services_box {
+.service_box {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 1em;
+    width: 85%;
 }
 .box_content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 85%;
+    margin: 2em;
 }
