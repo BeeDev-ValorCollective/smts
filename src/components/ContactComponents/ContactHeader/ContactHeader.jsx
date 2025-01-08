@@ -13,7 +13,10 @@ export default function ContactHeader() {
                     Get In Touch
                 </h2>
                 <p>
-                    For reliable and convenient tax services, contact Thad at Seniors Mobile Tax Services LLC. Call today to schedule your appointment or ask any questions you may have — Thad is here to help!
+                    For reliable and convenient tax services, contact Thad at Seniors Mobile Tax Services LLC.
+                </p>
+                <p>
+                    Call today to schedule your appointment or ask any questions you may have — Thad is here to help!
                 </p>
                 <img src={ Phone_Icon } alt="Call Us" />
                 <h3>PHONE</h3>
