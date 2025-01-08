@@ -1,5 +1,8 @@
 // BAD LINK VIEW PAGE
 
+// Import Custom Hooks
+import useScrollToTop from "../customHooks/useScrollToTop";
+
 // IMPORT SUBCOMPONENTS
 import Button from "../components/ReusableComponents/ButtonComponent/Button";
 
@@ -7,7 +10,9 @@ import Button from "../components/ReusableComponents/ButtonComponent/Button";
 import SMTSIcon from "../assets/images/SMTS_Icon_noBG.png"
 
 export default function Contact() {
-    
+
+    useScrollToTop();
+
     return(
         <main>
             <h1>404 page not found</h1>
