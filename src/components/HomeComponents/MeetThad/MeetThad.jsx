@@ -30,7 +30,7 @@ export default function MeetThad() {
                     Veteran Owned & Operated Business
                 </h5>
                 <p>
-                    With over 16 years of experience in tax preperation he is dedicated to providing expert and reliable tax services. As a proud member of the Virginia Society of Enrolled Agents and the National Enrolled Agents Association, he has successfully assisted hundres of clients, including processing over 200 ITINs since 2016.
+                    With over 18 years of experience as a tax practitioner.  He is dedicated to providing expert and reliable tax preparation services to his clients. He is a member of the NAEA and VASEA. Additionally, he is a commissioned notary for the Commonwealth of Virginia. He is a certified acceptance agent having processed over 200-ITINs since 2016.
                 </p>
             </div>
         </div>

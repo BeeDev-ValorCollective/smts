@@ -24,7 +24,7 @@ export default function WaysWeHelp() {
                     </div>
                     <div className='ways_we_help_box_body'>
                         <p>
-                            Small-Business Quarterly Taxes Personal Annual Taxes State and Local Taxes
+                            Assist with individual's quarterly federal and state tax payments
                         </p>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ export default function WaysWeHelp() {
                     </div>
                     <div className='ways_we_help_box_body'>
                         <p>
-                            Small-Business Employment Taxes Small-Business Quarterly Taxes Small Business Advising
+                            Ensure clients have submitted their June and September estimate quarterly tax payments on time
                         </p>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export default function WaysWeHelp() {
                     </div>
                     <div className='ways_we_help_box_body'>
                         <p>
-                            Small-Business Employment Taxes Small-Business Quarterly Taxes Year-End Tax Planning
+                            Ensure clients have made their final estimated quarterly tax payment by January 15th
                         </p>
                     </div>
                 </div>
