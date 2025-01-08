@@ -8,11 +8,11 @@
 /* DEFINE GLOBAL VARIABLES */
 :root {
   --base: 16px;
-  --red: #aa2b34;
+  --red: #AA2B34;
   --white: #DDDDE0;
   --blue: #3C3B6E;
   --black: #3C3B6E;
-  --background: #DDDDE0
+  --background: #DDDDE0;
 }
 
 /* STYLE RESET */
