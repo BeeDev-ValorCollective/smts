@@ -1,3 +1,24 @@
+/**
+ * useScrollUpButton Hook
+ *
+ * This custom React hook provides functionality for a "Scroll to Top" button.
+ * It monitors the user's scroll position and determines whether the button should
+ * be visible based on the scroll depth. Additionally, it detects if the device
+ * is touch-enabled, which can be useful for styling or functionality adjustments.
+ *
+ * Returns:
+ * - `backToTopButton` (boolean): Indicates if the "Go to Top" button should be visible.
+ * - `isTouchDevice` (boolean): Indicates if the user is on a touch-enabled device.
+ * - `scrollUp` (function): A function that scrolls the window to the top smoothly.
+ *
+ * Note:
+ * The hook automatically adds and cleans up a scroll event listener to track the
+ * scroll position and state. The button will be shown when the user scrolls down
+ * more than 150 pixels.
+
+ **/
+
+
 // IMPORT REACT MAGIC
 import { useEffect, useState } from "react";
 
