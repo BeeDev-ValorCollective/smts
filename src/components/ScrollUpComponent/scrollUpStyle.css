@@ -41,12 +41,23 @@
     visibility: hidden;
 }
 
+/* Slide out "scroll up" text */
 .scroll_up:hover .scroll_up_text {
     opacity: 1;
     visibility:visible;
     transform: translateX(-60px);
     color: var(--white);
 }
+
+/* Prevent slide-out on touch devices */
+.touch_device {
+    width: 35px !important;
+    
+    &:hover {
+        width: 35px;
+    }
+}
+
 
 @media screen and (min-width: 500px) {
     .scroll_up {
@@ -65,6 +76,13 @@
     }
     .scroll_up_text {
         font-size: 0.85rem;
+    }
+    .touch_device {
+        width: 40px !important;
+        
+        &:hover {
+            width: 40px;
+        }
     }
 }
 
@@ -86,5 +104,12 @@
     }
     .scroll_up_text {
         font-size: 0.95rem;
+    }
+    .touch_device {
+        width: 50px !important;
+        
+        &:hover {
+            width: 50px;
+        }
     }
 }
