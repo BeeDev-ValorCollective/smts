@@ -17,7 +17,7 @@ export default function Home() {
 
     return(
         <main>
-            <HomeHero Title1="Senior Mobile" Title2="Tax Services" SubTitle="Don't Drive... Make The Call" />
+            <HomeHero Title1="Seniors Mobile" Title2="Tax Services" SubTitle="Don't Drive... Make The Call" />
             <MeetThad />
             <WhatMakesUsDifferent />
             <Partnership />

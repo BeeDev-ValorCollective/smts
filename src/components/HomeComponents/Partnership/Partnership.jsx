@@ -42,7 +42,7 @@ export default function Partnership() {
                         <li>
                             <img src={ ChecklistIcon } alt="Checklist Icon" />
                             <p>
-                                Get your documents organizd with our free Tax Prep Checklist
+                                Get your documents organized with our free Tax Prep Checklist
                             </p>
                         </li>
                         <li>
@@ -74,7 +74,7 @@ export default function Partnership() {
                         <li>
                             <img src={ IdeaIcon } alt="Chat Icon" />
                             <p>
-                                Provide tax insight and advice for your personal and small-business needs 
+                                Provide tax inside and advice to help clients with tax avoidance stratagies, but never promote tax evasion schemes
                             </p>
                         </li>
                     </div>
