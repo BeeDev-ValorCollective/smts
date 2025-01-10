@@ -5,7 +5,7 @@ import './partnership.css'
 import ChatIcon from "../../../assets/images/chat_icon.png"
 import ChecklistIcon from "../../../assets/images/checklist_icon.png"
 import CalendarIcon from "../../../assets/images/calendar_icon.png"
-import MoneyIcon from "../../../assets/images/money_icon.png"
+import RefundIcon from "../../../assets/images/refund_icon.png"
 import DocumentIcon from "../../../assets/images/documents_icon.png"
 import IdeaIcon from "../../../assets/images/lightbulb_idea_icon.png"
 
@@ -60,7 +60,7 @@ export default function Partnership() {
                     </h3>
                     <div className="partner_sub_box">
                         <li>
-                            <img src={ MoneyIcon } alt="Chat Icon" />
+                            <img src={ RefundIcon } alt="Chat Icon" />
                             <p>
                                 Research tax code changes to make sure all bases are covered 
                             </p>
