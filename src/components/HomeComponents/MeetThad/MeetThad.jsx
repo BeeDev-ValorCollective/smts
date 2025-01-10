@@ -8,7 +8,7 @@ import './meetThad.css'
 
 
 // IMPORT IMAGES
-import userIcon from "../../../assets/images/UserIcon.jpg"
+import userIcon from "../../../assets/images/MeetThad.jpg"
 
 
 export default function MeetThad() {
