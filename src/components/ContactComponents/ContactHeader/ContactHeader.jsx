@@ -16,9 +16,6 @@ export default function ContactHeader() {
     return(
         <>
             <div className='contact_header'>
-                <h2>
-                    Get In Touch
-                </h2>
                 <p>
                     For reliable and convenient tax services, contact Thad at Seniors Mobile Tax Services LLC.
                 </p>
