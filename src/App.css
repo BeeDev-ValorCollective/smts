@@ -248,7 +248,7 @@ footer {
       }
     }
     
-    ul:nth-child(3) {
+    ul:nth-child(3), ul:nth-child(4) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -262,11 +262,22 @@ footer {
           font-size: 0.8rem;
           vertical-align: middle;
           font-weight: bold;
+          position: relative;
+          top: 1px;
         }
         
         a {
           font-size: 1rem;
         }
+      }
+    }
+
+    ul:nth-child(4) li {
+      p {
+        font-size: 0.6rem;
+      }
+      a {
+        font-size: 0.7rem;
       }
     }
     

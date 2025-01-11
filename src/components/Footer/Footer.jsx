@@ -37,6 +37,14 @@ export default function Footer({ currentPath }) {
                         <a href="https://beedev-services.com/" target="_blank" rel="noopener noreferrer">BeeDev-Services</a>
                     </li>
                 </ul>
+                <ul>
+                    <li>
+                        <p>Icons By:</p>
+                    </li>
+                    <li>
+                        <a href="https://icons8.com//" target="_blank" rel="noopener noreferrer">icons8</a>
+                    </li>
+                </ul>
             </div>
             <img src={ FooterIcon } alt="SMTS Icon" />
         </footer>
