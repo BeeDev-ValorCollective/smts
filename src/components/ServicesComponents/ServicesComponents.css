@@ -1,10 +1,16 @@
 .service_box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1em;
     width: 85%;
+}
+.service_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .box_content {
     display: flex;
@@ -13,4 +19,15 @@
     align-items: center;
     width: 85%;
     margin: 2em;
+}
+.pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 2em;
+}
+.pricing h2 {
+    color: #AA2B34;
 }
