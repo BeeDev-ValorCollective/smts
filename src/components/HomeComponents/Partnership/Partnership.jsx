@@ -5,7 +5,7 @@ import './partnership.css'
 import ChatIcon from "../../../assets/images/chat_icon.png"
 import ChecklistIcon from "../../../assets/images/checklist_icon.png"
 import CalendarIcon from "../../../assets/images/calendar_icon.png"
-import MoneyIcon from "../../../assets/images/money_icon.png"
+import RefundIcon from "../../../assets/images/refund_icon.png"
 import DocumentIcon from "../../../assets/images/documents_icon.png"
 import IdeaIcon from "../../../assets/images/lightbulb_idea_icon.png"
 
@@ -42,7 +42,7 @@ export default function Partnership() {
                         <li>
                             <img src={ ChecklistIcon } alt="Checklist Icon" />
                             <p>
-                                Get your documents organizd with our free Tax Prep Checklist
+                                Get your documents organized with our free Tax Prep Checklist
                             </p>
                         </li>
                         <li>
@@ -60,7 +60,7 @@ export default function Partnership() {
                     </h3>
                     <div className="partner_sub_box">
                         <li>
-                            <img src={ MoneyIcon } alt="Chat Icon" />
+                            <img src={ RefundIcon } alt="Chat Icon" />
                             <p>
                                 Research tax code changes to make sure all bases are covered 
                             </p>
@@ -74,7 +74,7 @@ export default function Partnership() {
                         <li>
                             <img src={ IdeaIcon } alt="Chat Icon" />
                             <p>
-                                Provide tax insight and advice for your personal and small-business needs 
+                                Provide tax inside and advice to help clients with tax avoidance stratagies, but never promote tax evasion schemes
                             </p>
                         </li>
                     </div>

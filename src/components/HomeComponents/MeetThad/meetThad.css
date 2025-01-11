@@ -9,11 +9,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
+
+    * { 
+        transition: all 200ms ease;
+    }
     
     img {
-        margin: 16px;
+        margin: 16px 0;
         height: 200px;
-        width: 200px;
+        width: 200px !important;
         border: 8px double var(--blue);
         border-radius: 50%;
     }
@@ -29,15 +34,30 @@
 
     
     p {
-        max-width: 650px;
+        max-width: 550px;
         padding: 16px;
     }
 }
 
-@media only screen and (min-width: 675px) {
+@media only screen and (min-width: 850px) {
     .meet_thad {
         margin: 48px 0;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
+
+        img {
+            height: 250px;
+            width: 250px !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .meet_thad {
+
+        img {
+            height: 325px;
+            width: 325px !important;
+        }
     }
 }

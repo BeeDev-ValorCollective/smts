@@ -16,7 +16,7 @@ export default function Benefits() {
                     E-FILE WITH <br />CONFIDENCE
                 </h5>
                 <p>
-                    Seniors Mobile Tax Service offers an easy-to-use experience, up-to-date standards, and exceptional support.
+                    Seniors Mobile Tax Services offers an easy-to-use experience, up-to-date standards, and exceptional support.
                 </p>
             </div>
 

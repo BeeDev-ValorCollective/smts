@@ -22,7 +22,7 @@ export default function WhatMakesUsDifferent() {
                     <div className='box_title'>
                         <img src={ Car } alt="car icon" />
                         <h3>
-                            Mobile Convergence Service
+                            MOBILE CONVERGENCE SERVICES
                         </h3>
                     </div>
                     <div className='box_body'>
@@ -55,7 +55,7 @@ export default function WhatMakesUsDifferent() {
                     </div>
                     <div className='box_body'>
                         <p>
-                            SMTS offers specialized services, including Certified Acceptance Agent (CAA) assistance for ITIN applications, notary public services, and IRS-authorized electronic filing. These additional services cater to a wide range of client needs with expertise and convenience.
+                            SMTS offers specialized services, including Certified Acceptance Agent (CAA) assistance for Individual Taxpayer Identification Number (ITIN) applications, notary public services, and IRS-authorized electronic filing. These additional services cater to a wide range of client needs with expertise and convenience.
                         </p>
                     </div>
                 </div>
