@@ -8,7 +8,7 @@ import './hero.css'
 // IMPORT IMAGES
 import HeroImage from '../../../assets/images/AmericanFlag.png'
 
-export default function HomeHero({ Title1, Title2, SubTitle }) {
+export default function PageHero({ Title1, Title2, SubTitle, Span }) {
     
     return(
         <div className='home_hero'>
@@ -17,6 +17,7 @@ export default function HomeHero({ Title1, Title2, SubTitle }) {
                 { Title1 }&nbsp;
                 <br className='mobile_only' />
                 { Title2 }
+                <span>{Span}</span>
             </h1>
             <p>
                 { SubTitle }
