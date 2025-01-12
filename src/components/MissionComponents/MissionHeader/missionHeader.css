@@ -1,0 +1,13 @@
+.mission_header {
+    margin: 36px 24px 0;
+    
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+}

@@ -9,7 +9,7 @@ import './App.css'
 const Index = React.lazy(() => import('./views/Home'));
 const Services = React.lazy(() => import('./views/Services'));
 const Contact = React.lazy(() => import('./views/Contact'));
-const About = React.lazy(() => import('./views/About'));
+const Mission = React.lazy(() => import('./views/Mission'));
 const BadLink = React.lazy(() => import('./views/BadLink'));
 
 // IMPORT COMPONENTS
@@ -90,11 +90,11 @@ function AppContent() {
           }
         />
 
-        {/* ABOUT */}
+        {/* MISSION PAGE */}
         <Route 
-          path='/aboutus'
+          path='/mission'
           element={
-            <About />
+            <Mission />
           }
         />
 
