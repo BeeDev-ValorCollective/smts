@@ -74,7 +74,7 @@
                 }
                 
                 &:not(:valid)&:not(:placeholder-shown) {
-                    border: 3px solid red;
+                    border: 3px solid var(--red);
                 }
                 
                 &:not(:placeholder-shown) + .label_line,
