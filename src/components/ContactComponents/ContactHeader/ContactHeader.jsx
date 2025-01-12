@@ -6,12 +6,10 @@ import Phone_Icon from '../../../assets/images/phone_icon.png'
 import Email_Icon from '../../../assets/images/email_icon.png'
 
 export default function ContactHeader() {
-    
+
     const PhoneLink = import.meta.env.VITE_LINK_PHONE;
     const PhoneDisplay = import.meta.env.VITE_DISPLAY_PHONE;
     const EmailLink = import.meta.env.VITE_INFO_EMAIL;
-
-
 
     return(
         <>
@@ -37,7 +35,6 @@ export default function ContactHeader() {
                             <h5>{ EmailLink }</h5>
                         </a>
                     </div>
-
                 </div>
             </div>
             <div className="message_hr">
