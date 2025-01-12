@@ -1,5 +1,5 @@
 /* HERO SECTION */
-.home_hero {
+.page_hero {
     height: 100px;
     
     img {
@@ -35,7 +35,7 @@
 }
 
 @media only screen and (min-width: 559px) {
-    .home_hero {
+    .page_hero {
         h1 {
             top:-75px
         }

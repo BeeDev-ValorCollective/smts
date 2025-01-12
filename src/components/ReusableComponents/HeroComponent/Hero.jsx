@@ -1,4 +1,4 @@
-// HOME PAGE HERO SECTION
+// PAGE HERO SECTION
 // Pass in Title1, Title2 and Subtitle as needed. 
 // Title1  and Title2 allow for splitting content for smaller views
 
@@ -11,7 +11,7 @@ import HeroImage from '../../../assets/images/AmericanFlag.png'
 export default function PageHero({ Title1, Title2, SubTitle, Span }) {
     
     return(
-        <div className='home_hero'>
+        <div className='page_hero'>
             <img src={HeroImage} alt="SMTS Hero" />
             <h1>
                 { Title1 }&nbsp;
