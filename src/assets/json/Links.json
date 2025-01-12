@@ -43,13 +43,13 @@
     },
     {
         "id": 4,
-        "url": "/aboutus",
-        "name": "About Us",
+        "url": "/mission",
+        "name": "Our Mission",
                 "meta": {
-            "title": "About Us - SMTS",
+            "title": "Our Mission - SMTS",
             "description": "",
             "keywords": "",
-            "ogTitle": "About Us - SMTS",
+            "ogTitle": "Our Mission - SMTS",
             "ogDescription": "",
             "ogImage": "",
             "ogUrl": ""

@@ -24,7 +24,7 @@ export default function WaysWeHelp() {
                     </div>
                     <div className='ways_we_help_box_body'>
                         <p>
-                            Assist with individual's quarterly federal and state tax payments
+                            Remind clients to submit the first quarterly estimated tax payment by April 15th (federal) and May 1st (state). 
                         </p>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ export default function WaysWeHelp() {
                     </div>
                     <div className='ways_we_help_box_body'>
                         <p>
-                            Ensure clients have submitted their June and September estimate quarterly tax payments on time
+                            Remind clients to submit their second and third quarterly estimated tax payments by June 15th and September 15th (federal) and their second and third quarterly estimated tax payments by June 15th and September 15th (state).
                         </p>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export default function WaysWeHelp() {
                     </div>
                     <div className='ways_we_help_box_body'>
                         <p>
-                            Ensure clients have made their final estimated quarterly tax payment by January 15th
+                        Remind clients to submit their final quarterly estimated tax payment by January 15th (federal) and January 15th (state) of the following year.
                         </p>
                     </div>
                 </div>

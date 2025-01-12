@@ -21,6 +21,7 @@ html, body, * {
   padding: 0px;
   border: 0px;
   font-family: 'Poppins', sans-serif;
+  font-display: swap;
   word-spacing: .097rem;
   list-style-type: none;
   text-decoration: none;
@@ -50,14 +51,13 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 0px auto;
   background-color: var(--background);
   overflow-x: hidden;
 }
-
 
 
 /*                        */
@@ -173,6 +173,7 @@ nav {
       
       a {
         color: var(--white);
+        word-spacing: normal;
         
         &:hover {
           color: red;
@@ -194,7 +195,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1020px) {
   .nav_header br {
     display: none !important; 
   }
@@ -248,7 +249,7 @@ footer {
       }
     }
     
-    ul:nth-child(3) {
+    ul:nth-child(3), ul:nth-child(4) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -258,15 +259,26 @@ footer {
         line-height: 100%;
         
         p {
-          color: var(--red);
+          color: var(--white);
           font-size: 0.8rem;
           vertical-align: middle;
           font-weight: bold;
+          position: relative;
+          top: 1px;
         }
         
         a {
           font-size: 1rem;
         }
+      }
+    }
+
+    ul:nth-child(4) li {
+      p {
+        font-size: 0.6rem;
+      }
+      a {
+        font-size: 0.7rem;
       }
     }
     

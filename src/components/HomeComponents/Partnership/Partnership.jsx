@@ -59,24 +59,26 @@ export default function Partnership() {
                         WHAT WE DO
                     </h3>
                     <div className="partner_sub_box">
-                        <li>
-                            <img src={ RefundIcon } alt="Chat Icon" />
-                            <p>
-                                Research tax code changes to make sure all bases are covered 
-                            </p>
-                        </li>
-                        <li>
-                            <img src={ DocumentIcon } alt="Chat Icon" />
-                            <p>
-                                Prepare your taxes and get them ready for filing 
-                            </p>
-                        </li>
-                        <li>
-                            <img src={ IdeaIcon } alt="Chat Icon" />
-                            <p>
-                                Provide tax inside and advice to help clients with tax avoidance stratagies, but never promote tax evasion schemes
-                            </p>
-                        </li>
+                        <ul>
+                            <li>
+                                <img src={ RefundIcon } alt="Chat Icon" />
+                                <p>
+                                    Research tax code changes to make sure all bases are covered 
+                                </p>
+                            </li>
+                            <li>
+                                <img src={ DocumentIcon } alt="Chat Icon" />
+                                <p>
+                                    Prepare your taxes and get them ready for filing 
+                                </p>
+                            </li>
+                            <li>
+                                <img src={ IdeaIcon } alt="Chat Icon" />
+                                <p>
+                                    Provide tax inside and advice to help clients with tax avoidance stratagies, but never promote tax evasion schemes
+                                </p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
