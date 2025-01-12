@@ -4,7 +4,7 @@
 // IMPORT SUBCOMPONENTS
 import ContactForm from "../components/ContactComponents/ContactForm/ContactForm";
 import ContactHeader from "../components/ContactComponents/ContactHeader/ContactHeader";
-import HomeHero from "../components/ReusableComponents/HeroComponent/Hero";
+import PageHero from "../components/ReusableComponents/HeroComponent/Hero";
 
 // Import Custom Hooks
 import useScrollToTop from "../customHooks/useScrollToTop";
@@ -15,7 +15,7 @@ export default function Contact() {
 
     return(
         <main>
-            <HomeHero Title1="Contact Us" />
+            <PageHero Title1="Contact Us" />
             <ContactHeader />
             <ContactForm />
         </main>
