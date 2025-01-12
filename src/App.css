@@ -259,7 +259,7 @@ footer {
         line-height: 100%;
         
         p {
-          color: var(--red);
+          color: var(--white);
           font-size: 0.8rem;
           vertical-align: middle;
           font-weight: bold;

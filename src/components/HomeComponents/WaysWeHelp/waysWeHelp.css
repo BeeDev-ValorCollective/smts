@@ -44,6 +44,7 @@
             
             h3 {
                 text-align: start;
+                vertical-align: middle;
                 line-height: 100%;
                 max-width: 100%;
                 padding: 4px 12px;
@@ -69,7 +70,7 @@
 }
 
 .ways_we_help_box:nth-child(1) h3 {
-    background-color: #BE888E;
+    background-color: #AA2B3440;
 }
 
 .ways_we_help_box:nth-child(2) h3 {
@@ -77,8 +78,8 @@
 }
 
 .ways_we_help_box:nth-child(3) h3 {
-    background-color: #7A849D;
-    color: #fff;
+    background-color: #3C3B6E40;
+    color: #3C3B6E;
 }
 
 @media only screen and (min-width: 950px) {
