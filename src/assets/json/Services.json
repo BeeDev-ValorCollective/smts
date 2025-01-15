@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "id_tag": "tax_services",
+        "img_ref": "EIcon",
+        "service_title": "Tax Services",
+        "service_desc": "Seniors Mobile Tax Services (SMTS) offers a full-service concierge mobile tax experience, bringing personalized care directly to your door. SMTS will collect and review your tax documents, prepare your return in a secure environment, and ensure you understand the results. Once reviewed and approved, your return will be electronically filed with the IRS, and a signed copy will be provided for your records.",
+        "service_pricing":[
+            {"item_id": 1,
+            "item_title": "E-File",
+            "item_price": "250.00"
+            }
+        ],
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "id_tag": "itin_services",
+        "img_ref": "BadgeIcon",
+        "service_title": "ITIN Services",
+        "service_desc": "SMTS specializes in assisting clients with obtaining an Individual Taxpayer Identification Number (ITIN), a unique 9-digit number issued by the IRS for those who cannot obtain a Social Security Number but need to file a federal tax return. SMTS simplifies the process by reviewing and certifying necessary documents, allowing clients to keep important originals, such as passports, safe in their possession.",
+        "service_pricing":[
+            {"item_id": 1,
+            "item_title": "One W7",
+            "item_price": "200"
+            },
+            {"item_id": 2,
+            "item_title": "Two W7",
+            "item_price": "300"
+            },
+            {"item_id": 3,
+            "item_title": "Three W7",
+            "item_price": "400"
+            },
+            {"item_id": 4,
+            "item_title": "One W7(COA)",
+            "item_price": "250"
+            },
+            {"item_id": 5,
+            "item_title": "Two W7(COA)",
+            "item_price": "350"
+            },
+            {"item_id": 6,
+            "item_title": "Three W7(COA)",
+            "item_price": "450"
+            },
+            {"item_id": 7,
+            "item_title": "One W7 and one W7(COA)",
+            "item_price": "300"
+            },
+            {"item_id": 8,
+            "item_title": "Two W7 and two W7(COA)",
+            "item_price": "400"
+            },
+            {"item_id": 9,
+            "item_title": "Three W7 and three W7(COA)",
+            "item_price": "500"
+            }
+        ],
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "id_tag": "notary_services",
+        "img_ref": "CheckmarkIcon",
+        "service_title": "Notary Services",
+        "service_desc": "SMTS provides professional notary services to meet your legal documentation needs. As a Virginia notary, we can serve as an unbiased witness for signatures, oaths, and acknowledgments on important legal documents. With a fee of just $10 per notarial act, SMTS offers reliable and convenient service anywhere within the Commonwealth of Virginia.",
+        "service_pricing":[
+            {"item_id": 1,
+            "item_title": "Notary / per request",
+            "item_price": "10"
+            }
+        ],
+        "isActive": true
+    },
+    {
+        "id": 4,
+        "id_tag": "",
+        "img_ref": "",
+        "service_title": "",
+        "service_desc": "",
+        "service_pricing":[
+            {"item_id": 1,
+            "item_title": "",
+            "item_price": ""
+            }
+        ],
+        "isActive": false
+    },
+    {
+        "id": 5,
+        "id_tag": "",
+        "img_ref": "",
+        "service_title": "",
+        "service_desc": "",
+        "service_pricing":[
+            {"item_id": 1,
+            "item_title": "",
+            "item_price": ""
+            }
+        ],
+        "isActive": false
+    }
+]
