@@ -53,7 +53,7 @@
     max-width: 700px;
     
     h4{
-        width: 90%;
+        width: 95%;
         margin: 16px auto 12px;
         border-bottom: 2px solid var(--black);
     }
@@ -67,7 +67,7 @@
         text-align: end;
         line-height: 100%;
         font-weight: 700;
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         
         span {
