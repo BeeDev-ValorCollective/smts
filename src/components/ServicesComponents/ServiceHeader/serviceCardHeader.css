@@ -1,0 +1,31 @@
+.service_options {
+    margin: 48px 0 0;
+    
+    .option_header {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 36px 16px;
+    }
+    
+    ul {
+        border-top: 1px solid var(--red);
+        border-bottom: 1px solid var(--red);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 56px;
+        width: 300px;
+        margin: 0 auto;
+        
+        li {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--red);
+            
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}

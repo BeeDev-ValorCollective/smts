@@ -9,6 +9,7 @@
         height: 50px;
         padding: 8px 12px;
         border-radius: 4px;
+        cursor: pointer;
         
         &:hover {filter: brightness(1.2);}
     }
