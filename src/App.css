@@ -314,12 +314,13 @@ footer {
     display: none;
   }
 }
-  /*                   */
-  /* END FOOTER STYLES */
-  /*                   */
+/*                   */
+/* END FOOTER STYLES */
+/*                   */
 
 
-  /*                      */
+
+/*                      */
 /*   SCROLL BAR STYLE   */
 /*                      */
 
@@ -341,8 +342,6 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: blue;
 }
-
-
 /*                          */
 /*   END SCROLL BAR STYLE   */
 /*                          */
