@@ -14,6 +14,20 @@
         }
     },
     {
+        "id": 4,
+        "url": "/mission",
+        "name": "Mission",
+                "meta": {
+            "title": "Our Mission - SMTS",
+            "description": "",
+            "keywords": "",
+            "ogTitle": "Our Mission - SMTS",
+            "ogDescription": "",
+            "ogImage": "",
+            "ogUrl": ""
+        }
+    },
+    {
         "id": 2,
         "url": "/services",
         "name": "Services",
@@ -36,20 +50,6 @@
             "description": "",
             "keywords": "",
             "ogTitle": "Contact - SMTS",
-            "ogDescription": "",
-            "ogImage": "",
-            "ogUrl": ""
-        }
-    },
-    {
-        "id": 4,
-        "url": "/mission",
-        "name": "Mission",
-                "meta": {
-            "title": "Our Mission - SMTS",
-            "description": "",
-            "keywords": "",
-            "ogTitle": "Our Mission - SMTS",
             "ogDescription": "",
             "ogImage": "",
             "ogUrl": ""
