@@ -333,8 +333,7 @@ footer {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--blue);
-  border-left: thin solid var(--background);
-  border-radius: 8px;
+  border-left: thin solid black;
   min-height: 20px;
 }
 
