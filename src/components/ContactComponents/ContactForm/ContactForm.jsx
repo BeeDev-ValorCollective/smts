@@ -6,7 +6,7 @@ import { useState } from 'react';
 import './contactForm.css';
 
 // IMPORT ICONS
-import { ImSpinner10 } from 'react-icons/im';
+import Spinner from '../../../assets/images/loading_spinner.png'
 
 // IMPORT HOOKS
 import useFormValidation from '../ContactHooks/useFormValidation';
@@ -123,7 +123,7 @@ export default function ContactUs() {
                 {isSubmitting ? (
                     <div className="form_button_box">
                         {!mailError && !mailFail && !success ? (
-                            <ImSpinner10 className="spinner" />
+                            <img src={ Spinner } alt="Spinner Icon" className="spinner"/>
                         ) : (
                             <>&nbsp;</>
                         )}
@@ -132,7 +132,7 @@ export default function ContactUs() {
                 {!isSubmitting && (
                     <div className="form_button_box">
                         <button hidden={!isButtonVisible} type="submit" disabled={!isFormValid}>
-                            Submit
+                            SUBMIT
                         </button>
                     </div>
                 )}

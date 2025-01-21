@@ -314,6 +314,33 @@ footer {
     display: none;
   }
 }
-  /*                   */
-  /* END FOOTER STYLES */
-  /*                   */
+/*                   */
+/* END FOOTER STYLES */
+/*                   */
+
+
+
+/*                      */
+/*   SCROLL BAR STYLE   */
+/*                      */
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-left: thin solid black;
+  min-height: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: blue;
+}
+/*                          */
+/*   END SCROLL BAR STYLE   */
+/*                          */

@@ -8,7 +8,7 @@
         "service_pricing":[
             {"item_id": 1,
             "item_title": "E-File",
-            "item_price": "250.00"
+            "item_price": "225.00"
             }
         ],
         "isActive": true

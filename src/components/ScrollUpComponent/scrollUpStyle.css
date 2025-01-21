@@ -19,12 +19,13 @@
     &:hover {
         width: 80px;
     }
-    
-    svg {
+
+    img {
+        filter: invert(1);
         position: absolute;
         top: 6.5px;
         right: 6.5px;
-        font-size: 20px;
+        height: 20px;
     }
 }
 
@@ -67,11 +68,10 @@
         &:hover {
             width: 90px;
         }
-        svg {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            font-size: 27px;
+        img {
+            top: 7px;
+            right: 7px;
+            height: 22.5px;
         }
     }
     .scroll_up_text {
@@ -95,11 +95,10 @@
         &:hover {
             width: 100px;
         }
-        svg {
-            position: absolute;
-            top: 6.5px;
-            right: 6.5px;
-            font-size: 35px;
+        img {
+            top: 8px;
+            right: 8.5px;
+            height: 30px;
         }
     }
     .scroll_up_text {

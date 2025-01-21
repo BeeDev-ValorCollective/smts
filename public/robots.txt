@@ -1,0 +1,90 @@
+# Block common bad bots
+User-agent: BadBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Sogou Spider
+Disallow: /
+
+User-agent: Email Extractor
+Disallow: /
+
+User-agent: Email Spider
+Disallow: /
+
+User-agent: LinkCrawler
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: NerdyBot
+Disallow: /
+
+User-agent: wget
+Disallow: /
+
+# Block other problematic bots
+User-agent: Baidu
+Disallow: /
+
+User-agent: BaiduSpider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: bLEXBot
+Disallow: /
+
+User-agent: UptimeRobot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+# Allow legitimate search engine bots
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+User-agent: DuckDuckBot
+Disallow:
+
+User-agent: Yahoo! Slurp
+Disallow:
+
+# Disallow crawling of specific directories
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+Disallow: /cart/
+
+# Allow crawling of important public content
+User-agent: *
+Allow: /public/
+Allow: /assets/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://seniorsmobiletaxservices.com/sitemap.xml
