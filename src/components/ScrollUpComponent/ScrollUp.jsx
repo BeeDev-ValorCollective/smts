@@ -5,7 +5,8 @@ import React from "react";
 import './scrollUpStyle.css';
 
 // IMPORT ICONS
-import { FaArrowUp } from "react-icons/fa";
+// import { FaArrowUp } from "react-icons/fa";
+import UpArrow from '../../assets/images/up_arrow.png'
 
 // IMPORT HOOKS
 import useScrollUpButton from "./ScrollUpHooks/useScrollUpButton";
@@ -22,7 +23,8 @@ export default function ScrollUpButton() {
                     className={`scroll_up ${isTouchDevice ? "touch_device" : ""}`}
                     onClick={scrollUp}
                 >
-                    <FaArrowUp />
+                    <img src={ UpArrow } alt="Scroll To Top" />
+                    {/* <FaArrowUp /> */}
                     {!isTouchDevice && (
                         <span className="scroll_up_text">
                             Scroll 
