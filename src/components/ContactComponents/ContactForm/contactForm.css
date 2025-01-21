@@ -148,10 +148,9 @@
             }
             
             .spinner {
-                
+                height: 1em;
                 font-size: 4rem;
-                color: var(--blue);
-                animation: spin 2s linear infinite;
+                animation: spin 1.5s linear infinite;
             }
         }
     }
