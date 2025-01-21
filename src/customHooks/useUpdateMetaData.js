@@ -16,6 +16,7 @@ function useUpdateMetaData(metaData) {
       metaKeywords.setAttribute('content', metaData.keywords);
     }
 
+    // OPEN GRAPH METADATA
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) {
       ogTitle.setAttribute('content', metaData.ogTitle);
@@ -36,6 +37,17 @@ function useUpdateMetaData(metaData) {
       ogUrl.setAttribute('content', metaData.ogUrl);
     }
 
+    // TWITTER METADATA
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', metaData.twitterTitle);
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', metaData.twitterDescription);
+    }
+    
   }, [metaData]);
 }
 

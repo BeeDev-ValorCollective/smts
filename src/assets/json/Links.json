@@ -4,55 +4,62 @@
         "url": "/home",
         "name": "Home",
         "meta": {
-            "title": "Seniors Mobile Tax Services",
-            "description": "",
-            "keywords": "",
-            "ogTitle": "",
-            "ogDescription": "",
-            "ogImage": "",
-            "ogUrl": ""
-        }
-    },
-    {
-        "id": 4,
-        "url": "/mission",
-        "name": "Mission",
-                "meta": {
-            "title": "Our Mission - SMTS",
-            "description": "",
-            "keywords": "",
-            "ogTitle": "Our Mission - SMTS",
-            "ogDescription": "",
-            "ogImage": "",
-            "ogUrl": ""
+            "title": "Seniors Mobile Tax Services | Stress-Free Tax Preparation for Seniors & Veterans",
+            "description": "Seniors Mobile Tax Services provides expert in-home tax preparation tailored for seniors and veterans. Trusted, mobile, and stress-free service with 18+ years of experience.",
+            "keywords": "mobile tax services, senior tax preparation, veteran tax services, in-home tax preparation, IRS e-filing, stress-free tax services",
+            "ogTitle": "Seniors Mobile Tax Services | Mobile Tax Preparation Experts",
+            "ogDescription": "Providing stress-free, expert tax preparation services for seniors and veterans in the comfort of your home. Trusted for 18+ years.",
+            "ogImage": "./src/assets/images/SMTS_Icon_White.jpg",
+            "ogUrl": "https://seniorsmobiletaxservices.com/home",
+            "twitterTitle": "Seniors Mobile Tax Services | Trusted Tax Preparation for Seniors & Veterans",
+            "twitterDescription": "Expert, mobile tax preparation for seniors and veterans. Stress-free and reliable service with over 18 years of experience.",
+            "twitterImage": "./src/assets/images/SMTS_Icon_White.jpg"
         }
     },
     {
         "id": 2,
-        "url": "/services",
-        "name": "Services",
-                "meta": {
-            "title": "Services - SMTS",
-            "description": "",
-            "keywords": "",
-            "ogTitle": "Services - SMTS",
-            "ogDescription": "",
-            "ogImage": "",
-            "ogUrl": ""
+        "url": "/mission",
+        "name": "Mission",
+        "meta": {
+            "title": "Our Mission | Stress-Free, In-Home Tax Filing for Seniors & Veterans",
+            "description": "Seniors Mobile Tax Services brings professional, personalized tax preparation to your doorstep in Richmond, VA. Stay safe and stress-free with our veteran-owned mobile service.",
+            "keywords": "in-home tax services, mobile tax preparation, senior tax filing, veteran tax services, stress-free tax filing, Richmond Virginia tax services",
+            "ogTitle": "Our Mission | Stress-Free Tax Filing for Seniors & Veterans",
+            "ogDescription": "Discover how Seniors Mobile Tax Services simplifies tax preparation with personalized, in-home service. Stay safe and skip the stress of winter travel.",
+            "ogUrl": "https://seniorsmobiletaxservices.com/mission",
+            "twitterTitle": "Our Mission | In-Home Tax Filing for Seniors & Veterans",
+            "twitterDescription": "Seniors Mobile Tax Services provides stress-free, in-home tax preparation in Richmond, VA. Professional and veteran-owned."
         }
     },
     {
         "id": 3,
+        "url": "/services",
+        "name": "Services",
+        "meta": {
+            "title": "Our Services | Mobile Tax Preparation, ITIN, and Notary Services",
+            "description": "Explore our professional mobile tax preparation, ITIN assistance, and notary services. Seniors Mobile Tax Services delivers reliable, in-home solutions in Richmond, VA.",
+            "keywords": "mobile tax preparation, ITIN services, notary services, Richmond Virginia tax help, in-home tax filing, professional tax services",
+            "ogTitle": "Our Services | Mobile Tax, ITIN, and Notary Solutions",
+            "ogDescription": "Seniors Mobile Tax Services offers stress-free, professional tax preparation, ITIN assistance, and notary services in Richmond, VA. Convenience and expertise at your doorstep.",
+            "ogUrl": "https://seniorsmobiletaxservices.com/services",
+            "twitterTitle": "Our Services | Mobile Tax Preparation and Notary",
+            "twitterDescription": "Discover our mobile tax, ITIN, and notary services in Richmond, VA. Professional, convenient, and tailored to your needs."
+        }
+    },
+    {
+        "id": 4,
         "url": "/contact",
         "name": "Contact",
-                "meta": {
-            "title": "Contact - SMTS",
-            "description": "",
-            "keywords": "",
-            "ogTitle": "Contact - SMTS",
-            "ogDescription": "",
-            "ogImage": "",
-            "ogUrl": ""
+        "meta": {
+            "title": "Contact Seniors Mobile Tax Services | Schedule Your Appointment Today",
+            "description": "Get in touch with Thad at Seniors Mobile Tax Services to schedule your in-home tax appointment, or ask questions about our tax services in Richmond, VA.",
+            "keywords": "contact tax services, mobile tax service Richmond, tax appointment scheduling, contact Seniors Mobile Tax Services, schedule tax consultation",
+            "ogTitle": "Contact Seniors Mobile Tax Services | Tax Appointment Scheduling",
+            "ogDescription": "Reach out to Seniors Mobile Tax Services for convenient in-home tax preparation and services. Schedule an appointment or get answers to your tax questions today.",
+            "ogUrl": "https://seniorsmobiletaxservices.com/contact",
+            "twitterTitle": "Contact Seniors Mobile Tax Services | In-Home Tax Services Appointment",
+            "twitterDescription": "Need tax help? Contact Thad at Seniors Mobile Tax Services in Richmond, VA for a stress-free in-home tax experience. Schedule your appointment now."
         }
     }
+    
 ]
