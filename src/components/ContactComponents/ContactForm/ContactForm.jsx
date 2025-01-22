@@ -1,3 +1,43 @@
+/**
+ * Contact Us Component
+ * 
+ * This component provides a contact form for users to send messages. It includes 
+ * fields for the user's name, email, subject, and message. The form is validated 
+ * before submission, and it also handles success and error messages with a loading 
+ * spinner during submission.
+ * 
+ * Key Features:
+ * - **Form Validation**: Uses a custom hook (`useFormValidation`) to ensure all fields are 
+ *   properly filled out before submission.
+ * - **Mail Submission**: Uses another custom hook (`useMailSubmission`) to handle the 
+ *   form submission process. It communicates with a backend (or email service) to 
+ *   send the message.
+ * - **Loading Spinner**: Displays a spinner while the form is being submitted.
+ * - **Error/Success Messages**: Displays appropriate messages based on the form 
+ *   submission result, including a fallback email in case of failure.
+ * - **Accessibility**: Includes labels for all input fields, improving accessibility.
+ * 
+ * Props:
+ * - **None**
+ * 
+ * State:
+ * - **`subject`** (`string`): The subject of the contact message.
+ * - **`message`** (`string`): The content of the contact message.
+ * - **`contact`** (`string`): The user's email address.
+ * - **`userName`** (`string`): The name of the user sending the message.
+ * - **`success`** (`string`): A success message after the form is successfully submitted.
+ * - **`mailError`** (`string`): An error message if the mail submission fails.
+ * - **`errorCount`** (`number`): A counter used to track form submission attempts.
+ * - **`mailFail`** (`boolean`): A flag indicating whether the mail submission failed.
+ * - **`isButtonVisible`** (`boolean`): A flag indicating whether the submit button is visible.
+ * 
+ * Usage:
+ * This component is typically used in a contact or support page. It allows users 
+ * to send their queries or messages to the support team. Upon successful submission, 
+ * a success message is shown, and the user is redirected. If there is an error, 
+ * the user is shown a failure message with a fallback email.
+ */
+
 // IMPORT REACT MAGIC
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -12,7 +52,6 @@ import Spinner from '../../../assets/images/loading_spinner.png'
 import useFormValidation from '../ContactHooks/useFormValidation';
 import useMailSubmission from '../ContactHooks/useMailSubmission';
 
-
 export default function ContactUs() {
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
@@ -24,10 +63,10 @@ export default function ContactUs() {
     const [mailFail, setMailFail] = useState(false);
     const [isButtonVisible, setIsButtonVisible] = useState(true);
     const SupportEmail = import.meta.env.VITE_SUPPORT_EMAIL;
-
+    
     // Custom hook for form validation
     const isFormValid = useFormValidation({ userName, subject, message, contact });
-
+    
     // Custom hook for mail submission logic
     const { sendMail, isSubmitting } = useMailSubmission({
         subject,
@@ -44,7 +83,7 @@ export default function ContactUs() {
         setContact,
         setUserName,
     });
-
+    
     return (
         <div className="contact_container">
             {/* FORM SECTION */}
@@ -171,4 +210,4 @@ export default function ContactUs() {
             {/* FORM SECTION */}
         </div>
     );
-}
+};
