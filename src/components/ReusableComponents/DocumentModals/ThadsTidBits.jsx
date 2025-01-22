@@ -115,7 +115,7 @@ export default function ThadsTidBits () {
                             </li>
                             <li>
                                 <p>
-                                    Acceptable Documentation for ITIN. There are thirteen acceptable identification documents that can be used to obtain an ITIN. A passport is the only stand-alone document that requires no other forms of identification. See <a href="www.irs.gov" target="_blank" rel="noopener noreferrer">www.irs.gov</a> for other acceptable forms of identification.
+                                    Acceptable Documentation for ITIN. There are thirteen acceptable identification documents that can be used to obtain an ITIN. A passport is the only stand-alone document that requires no other forms of identification. See <a href="http://www.irs.gov" target="_blank" rel="noopener noreferrer">www.irs.gov</a> for other acceptable forms of identification.
                                 </p>
                             </li>
                             <li>
@@ -197,7 +197,7 @@ export default function ThadsTidBits () {
                             </li>
                             <li>
                                 <p>
-                                    Seniors Mobile Tax Services LLC can offer CAA services to persons needing an ITIN. If you choose Option 3, the CAA services will cost you money. There is a range of costs. There are no hidden and surprise costs. You will know the cost for services, even over the telephone or email and at the initial face-to-face interview. To find a CAA near you, visit <a href="www.irs.gov" target="_blank" rel="noopener noreferrer">www.irs.gov</a>, search for Certifying Acceptance Agents for Virginia. Please note, IRS list Acceptance Agent (AA) and Certifying Acceptance Agent (CAA) on their website. AA cannot authenticate your identification documents. Certifying Acceptance Agents (CAA) can authenticate your identification and return them back to you.
+                                    Seniors Mobile Tax Services LLC can offer CAA services to persons needing an ITIN. If you choose Option 3, the CAA services will cost you money. There is a range of costs. There are no hidden and surprise costs. You will know the cost for services, even over the telephone or email and at the initial face-to-face interview. To find a CAA near you, visit <a href="http://www.irs.gov" target="_blank" rel="noopener noreferrer">www.irs.gov</a>, search for Certifying Acceptance Agents for Virginia. Please note, IRS list Acceptance Agent (AA) and Certifying Acceptance Agent (CAA) on their website. AA cannot authenticate your identification documents. Certifying Acceptance Agents (CAA) can authenticate your identification and return them back to you.
                                 </p>
                             </li>
 
