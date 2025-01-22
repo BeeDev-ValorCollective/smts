@@ -1,3 +1,51 @@
+/**
+ * WhatMakesUsDifferent Component
+ * 
+ * This component highlights the unique features and services provided by Seniors Mobile Tax Services (SMTS).
+ * It outlines three key differentiators that set SMTS apart from other tax preparation services.
+ * 
+ * Functionality:
+ * - Displays a title summarizing the component's purpose.
+ * - Showcases three primary aspects of the service:
+ *   - **Mobile Convergence Services**: Fully mobile tax preparation for convenience and safety.
+ *   - **Stress-Free Process**: Transparent, private, and flat-rate tax preparation services.
+ *   - **Specialized Services**: Unique offerings such as ITIN application assistance, notary public services, and electronic filing.
+ * 
+ * Renders:
+ * - **Title**: "How Seniors Mobile Tax Service Is Different."
+ * - **Three Highlighted Boxes**:
+ *   - Each box contains:
+ *     - An icon visually representing the service.
+ *     - A title summarizing the feature.
+ *     - A description elaborating on the benefit.
+ * 
+ * Styling:
+ * - Styled using the `WhatMakesUsDifferent.css` file.
+ * - Each box is visually distinct and neatly arranged for readability.
+ * - Icons enhance the visual appeal and support content comprehension.
+ * 
+ * Notes:
+ * - **Accessibility**:
+ *   - Includes alt text for all icons to support screen readers.
+ *   - Content is structured for easy readability.
+ * - **Reusability**:
+ *   - Can be expanded with additional differentiators or modified for other services.
+ * - **Responsive Design**:
+ *   - Layout adapts to various screen sizes for optimal viewing.
+ * - **Scalability**:
+ *   - Additional sections or boxes can be added without significant restructuring.
+ * 
+ * Props:
+ * - This component does not accept props and uses static content.
+ * 
+ * Dependencies:
+ * - `WhatMakesUsDifferent.css` (for styling).
+ * - Image assets:
+ *   - `Car` (car_icon.png)
+ *   - `Lightbulb` (light_bulb.png)
+ *   - `Magnifying` (magnifying_glass.png)
+ */
+
 // IMPORT STYLES
 import './WhatMakesUsDifferent.css'
 
@@ -6,16 +54,15 @@ import Car from "../../../assets/images/car_icon.png"
 import Lightbulb from "../../../assets/images/light_bulb.png"
 import Magnifying from "../../../assets/images/magnifying_glass.png"
 
-
 export default function WhatMakesUsDifferent() {
-
+    
     return(
         <div className='what_makes_smts'>
-
+            {/* TITLE */}
             <h2>
                 How Seniors Mobile Tax Service Is Different
             </h2>
-
+            {/* BOX WRAPPER */}
             <div className='home_box_wrapper'>
                 {/* BOX1 */}
                 <div className='home_box'>

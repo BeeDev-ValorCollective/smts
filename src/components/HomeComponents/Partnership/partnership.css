@@ -42,9 +42,9 @@
             
             li {
                 width: 100%;
+                margin: 8px 0;
                 display: flex;
                 align-items: center;
-                margin: 8px 0;
                 
                 img {
                     height: 75px;
