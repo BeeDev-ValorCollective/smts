@@ -23,7 +23,7 @@
     img {
         filter: invert(1);
         position: absolute;
-        top: 6.5px;
+        top: 4.5px;
         right: 6.5px;
         height: 20px;
     }
@@ -69,7 +69,7 @@
             width: 90px;
         }
         img {
-            top: 7px;
+            top: 6px;
             right: 7px;
             height: 22.5px;
         }
