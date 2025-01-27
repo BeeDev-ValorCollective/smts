@@ -60,7 +60,7 @@ export default function WhatMakesUsDifferent() {
         <div className='what_makes_smts'>
             {/* TITLE */}
             <h2>
-                How Seniors Mobile Tax Service Is Different
+                How Seniors Mobile Tax Services Is Different
             </h2>
             {/* BOX WRAPPER */}
             <div className='home_box_wrapper'>
