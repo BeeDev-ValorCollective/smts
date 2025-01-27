@@ -106,46 +106,74 @@ export default function DocPrepModal () {
                         <h4>Tidbits to Help Prepare You to File Federal & VA State Income Taxes</h4>
                         <ul className='modal_list'>
                             <li>
-                                Gather SSNs or ITINs, full names and birth dates for all persons on the tax return.
+                                <p className='blue_check'>
+                                    Gather SSNs or ITINs, full names and birth dates for all persons on the tax return.
+                                </p>
                             </li>
                             <li>
-                                Gather your driver's livense information, include your spouse's information.
+                                <p className='red_check'>
+                                    Gather your driver's livense information, include your spouse's information.
+                                </p>
                             </li>
                             <li>
-                                Gather your bank account and routing numbers. Why? For direct deposit and direct debit.
+                                <p className='blue_check'>
+                                    Gather your bank account and routing numbers. Why? For direct deposit and direct debit.
+                                </p>
                             </li>
                             <li>
-                                Did you and anyone else on your return receive an Identity Protection Personal Identification Number (IP PIN)? Have you applied for this number at the federal and state levels? If not, maybe you should. These numbers must be included on your return... If not, the return will be rejected.
+                                <p className='red_check'>
+                                    Did you and anyone else on your return receive an Identity Protection Personal Identification Number (IP PIN)? Have you applied for this number at the federal and state levels? If not, maybe you should. These numbers must be included on your return... If not, the return will be rejected.
+                                </p>
                             </li>
                             <li>
-                                Did you make any federal or state estimated quarterly tax payments? Do you have a record of payments?
+                                <p className='blue_check'>
+                                    Did you make any federal or state estimated quarterly tax payments? Do you have a record of payments?
+                                </p>
                             </li>
                             <li>
-                                Gather all your sources of income... social security, retirement, railroad retirement, dividend and interest income, W2, 1099-K, 1099-MISC, 1099-DA, 1099-G, etc.
+                                <p className='red_check'>
+                                    Gather all your sources of income... social security, retirement, railroad retirement, dividend and interest income, W2, 1099-K, 1099-MISC, 1099-DA, 1099-G, etc.
+                                </p>
                             </li>
                             <li>
-                                Are you able to itemize? Probably not. Why? The standard deduction threshold may be higher than your itemized deductions. But just in case, locate the following documents: Items that you donated: when did you donate the items? Where did you donate the items? How much did you pay for the items? What was the fair market value (FMV) of the items when you donated them?
+                                <p className='blue_check'>
+                                    Are you able to itemize? Probably not. Why? The standard deduction threshold may be higher than your itemized deductions. But just in case, locate the following documents: Items that you donated: when did you donate the items? Where did you donate the items? How much did you pay for the items? What was the fair market value (FMV) of the items when you donated them?
+                                </p>
                             </li>
                             <li>
-                                Any cash contributions: Churches, non-profit organizations, charitable miles, etc.
+                                <p className='red_check'>
+                                    Any cash contributions: Churches, non-profit organizations, charitable miles, etc.
+                                </p>
                             </li>
                             <li>
-                                Medical expenses: Must be 7.5% of your adjusted gross income (AGI): doctors, dentists, psychiatrists, prescriptions, medical mileage, medical alert devices, etc. 
+                                <p className='blue_check'>
+                                    Medical expenses: Must be 7.5% of your adjusted gross income (AGI): doctors, dentists, psychiatrists, prescriptions, medical mileage, medical alert devices, etc. 
+                                </p>
                             </li>
                             <li>
-                                Intestments: Need the transaction documents for date of purchase, date sold, cost at purchase, selling price. Did you purchase or sell any cryptocurrency?
+                                <p className='red_check'>
+                                    Intestments: Need the transaction documents for date of purchase, date sold, cost at purchase, selling price. Did you purchase or sell any cryptocurrency?
+                                </p>
                             </li>
                             <li>
-                                Do you own real estate? Did you sell any real estate? Do you own rental property? Are you renting any rental property? Description of rental property. Any expenses for the rental property.
+                                <p className='blue_check'>
+                                    Do you own real estate? Did you sell any real estate? Do you own rental property? Are you renting any rental property? Description of rental property. Any expenses for the rental property.
+                                </p>
                             </li>
                             <li>
-                                Did you sell your home in 2024? Any improvements? Need that HUD-1 statement to determine whether you had a capital gain.
+                                <p className='red_check'>
+                                    Did you sell your home in 2024? Any improvements? Need that HUD-1 statement to determine whether you had a capital gain.
+                                </p>
                             </li>
                             <li>
-                                Do you have any charitable mileages?
+                                <p className='blue_check'>
+                                    Do you have any charitable mileages?
+                                </p>
                             </li>
                             <li>
-                                Where is your 2023 federal and state income tax return?
+                                <p className='red_check'>
+                                    Where is your 2023 federal and state income tax return?
+                                </p>
                             </li>
                         </ul>
                     </div>

@@ -116,7 +116,6 @@
       font-size: .85rem;
     }
     
-    
     .modal_list {
       width: 100%;
       margin: 4px auto;
@@ -134,7 +133,7 @@
         
         p{
           font-size: .85rem;
-
+          
           .spacer {
             height: 1rem;
             padding: 8px;
@@ -152,19 +151,22 @@
             color: red;
           }
         }
-
       
       }
       
-      li::before {
-        content: "✔ ";
+      li p::before {
+        content: "✔";
         color: var(--blue);
         font-size: 1.2em;
         margin-right: 8px;
       }
       
-      li:nth-child(even):before {
+      .red_check::before {
         color: var(--red);
+      }
+      
+      li p:before .blue_check {
+        color: var(--blue);
       }
     }
   }
