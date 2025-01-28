@@ -37,7 +37,7 @@ export default function Navbar({ currentPath }) {
                 <h1>
                     Seniors Mobile&nbsp;
                     <br />
-                    Tax Service
+                    Tax Services
                 </h1>
             </div>
             <div className="nav_links">

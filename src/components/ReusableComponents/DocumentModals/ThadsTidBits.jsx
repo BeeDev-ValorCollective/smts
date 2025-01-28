@@ -109,27 +109,27 @@ export default function ThadsTidBits () {
                         </h4>
                         <ul className='modal_list'>
                             <li>
-                                <p>
+                                <p className='red_check'>
                                     What is an Individual Taxpayer Identification Number (ITIN)? It is a tax processing number, issued by the IRS for certain resident and nonresident aliens, their spouses, and dependents. ITINs are assigned only for federal tax purposes. ITINs provide a means to efficiently process and account for tax returns and payments for those not eligible for social security numbers.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='blue_check'>
                                     Acceptable Documentation for ITIN. There are thirteen acceptable identification documents that can be used to obtain an ITIN. A passport is the only stand-alone document that requires no other forms of identification. See <a href="http://www.irs.gov" target="_blank" rel="noopener noreferrer">www.irs.gov</a> for other acceptable forms of identification.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='red_check'>
                                     If a child is under 6 years of age, the parents must submit medical records showing dependent information and address and must be on the facility letterhead and a certified copy of the child’s passport. It must show contact information and must be signed. <b>Please note-</b> vaccination booklets do not work for this process.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='blue_check'>
                                     If the child is 6 years of age, but under 18 years of age, the parents must submit original school record signed by the principal, vice president, or secretary, including a certified copy of the child’s passport. The school record must be within a year, and must show student information, address, and grades.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='red_check'>
                                     <b>Persons seeking ITIN Processing Option 1 for Do It Yourself (DIY)</b>
                                     <span class="spacer"><br /></span>
                                     • Taxpayer is responsible for the entire ITIN application process. 
@@ -141,9 +141,8 @@ export default function ThadsTidBits () {
                                     • Taxpayer must mail the complete package, along with the original forms of identification.
                                 </p>
                             </li>
-
                             <li>
-                                <p>
+                                <p className='blue_check'>
                                     <b>Persons seeking ITIN Processing Option 2 for Taxpayer Assistance Center (TAC)</b>
                                     <span class="spacer"><br /></span>
                                     • Taxpayers must complete a tax return.
@@ -156,7 +155,7 @@ export default function ThadsTidBits () {
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='red_check'>
                                     <b>Persons seeking ITIN Processing Option 3 for Certifying Assistance Agent (CAA)</b>
                                     <span class="spacer"><br /></span>
                                     • The CAA is responsible for the entire ITIN application process.
@@ -181,42 +180,30 @@ export default function ThadsTidBits () {
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='blue_check'>
                                     Is the CAA necessary to complete the ITIN process? No. But the CAA can assist with completing and submitting your ITIN package. The CAA will review and authenticate all required identifications during the in-person meeting and then return your passport back to you. <b>This is important:</b>  Do you really want to mail your valuable passport to the IRS?
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='red_check'>
                                     The taxpayer shall get a full copy of the ITIN package for their record.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='blue_check'>
                                     CAA can also help with completing Form 1040, if necessary, but not required if the taxpayer can complete it. There is an additional cost for preparing the federal and state income tax returns.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p className='red_check'>
                                     Seniors Mobile Tax Services LLC can offer CAA services to persons needing an ITIN. If you choose Option 3, the CAA services will cost you money. There is a range of costs. There are no hidden and surprise costs. You will know the cost for services, even over the telephone or email and at the initial face-to-face interview. To find a CAA near you, visit <a href="http://www.irs.gov" target="_blank" rel="noopener noreferrer">www.irs.gov</a>, search for Certifying Acceptance Agents for Virginia. Please note, IRS list Acceptance Agent (AA) and Certifying Acceptance Agent (CAA) on their website. AA cannot authenticate your identification documents. Certifying Acceptance Agents (CAA) can authenticate your identification and return them back to you.
                                 </p>
                             </li>
-
                         </ul>
                         <p className='tidbit_note'>
                             <b>Please note:</b> providing CAA services is separate from preparing tax returns. The taxpayer may be a do it yourself (DIY) filer, which is acceptable. In this case, the CAA will review the tax return that the client completed for accuracy. If the return is accurate, then the CAA shall include the return in with the rest of the ITIN supporting documentation. 
                         </p>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
                     {/* MODAL FOOTER / CLOSE BUTTON */}
                     <div className="modal_footer">
                         <Button onClick={closeModal} to="#" text="Close" color="white" />
