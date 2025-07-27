@@ -54,6 +54,13 @@ export default function ServiceOptions() {
     const [jsonError, setJsonError] = useState(null);
 
     useEffect(() => {
+        fetch(import.meta.env.VITE_SERVICES_API)
+            .then(res => res.json())
+            .then(data => console.log('JSON loaded:', data))
+            .catch(err => console.error('Fetch error:', err));
+    }, []);
+
+    useEffect(() => {
         fetch(SERVICES_URL)
             .then((res) => {
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
