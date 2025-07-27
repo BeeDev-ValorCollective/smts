@@ -28,6 +28,8 @@ import './meetThad.css'
 import userIcon from "../../../assets/images/MeetThad.jpg"
 
 export default function MeetThad() {
+
+    const years = new Date().getFullYear() - 2007
     
     return(
         <div className='meet_thad'>
@@ -46,7 +48,7 @@ export default function MeetThad() {
                     Veteran Owned & Operated Business
                 </h5>
                 <p>
-                    With over 18 years of experience as a tax practitioner.  He is dedicated to providing expert and reliable tax preparation services to his clients. He is a member of the NAEA and VASEA. Additionally, he is a commissioned notary for the Commonwealth of Virginia. He is a certified acceptance agent having processed over 200-ITINs since 2016.
+                    With over {years} years of experience as a tax practitioner.  He is dedicated to providing expert and reliable tax preparation services to his clients. He is a member of the NAEA and VASEA. Additionally, he is a commissioned notary for the Commonwealth of Virginia. He is a certified acceptance agent having processed over 200-ITINs since 2016.
                 </p>
             </div>
         </div>
