@@ -42,7 +42,9 @@
 
 // IMPORT REACT MAGIC
 import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+// import { Routes, Route, Navigate } from 'react-router-dom'
+// import { useLocation } from 'react-router'
 
 // IMPORT STYLES
 import './App.css'
@@ -66,13 +68,11 @@ import useUpdateMetaData from './customHooks/useUpdateMetaData';
 // WRAPPER TO UTILIZE THE LAZY LOADING
 function App() {
   return (
-    <BrowserRouter>
       <Suspense 
-        fallback={ <BadLink /> }
-      >
+        // fallback={ <BadLink /> }>
+          fallback={<div />}>
         <AppContent />
       </Suspense>
-    </BrowserRouter>
   );
 }
 

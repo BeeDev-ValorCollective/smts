@@ -20,7 +20,8 @@ import { useEffect } from "react";
 
 const useScrollToTop = () => {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        if (typeof window === 'undefined') return;
+        window.requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }));
     }, []);
 };
 

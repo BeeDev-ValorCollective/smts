@@ -21,26 +21,39 @@
  * The Contact component is designed to display when a user navigates to a non-existent page, 
  * guiding them back to the homepage with a clear error message and a button.
  **/
+import React from 'react';
+import { useInRouterContext } from 'react-router'; // v7 server-safe
+import { Link } from 'react-router-dom';
 
-// Import Custom Hooks
-import useScrollToTop from "../customHooks/useScrollToTop";
+import useScrollToTop from '../customHooks/useScrollToTop';
 
-// IMPORT SUBCOMPONENTS
-import Button from "../components/ReusableComponents/ButtonComponent/Button";
+// SUBCOMPONENTS
+import Button from '../components/ReusableComponents/ButtonComponent/Button';
+import PageHero from '../components/ReusableComponents/HeroComponent/Hero';
 
-// IMPORT IMAGES
-import SMTSIcon from "../assets/images/SMTS_Icon_noBG.png"
-import PageHero from "../components/ReusableComponents/HeroComponent/Hero";
+// IMAGES
+import SMTSIcon from '../assets/images/SMTS_Icon_noBG.png';
 
-export default function Contact() {
-    
-    useScrollToTop();
-    
-    return(
-        <main>
-            <PageHero Title1="ERROR 404 -" Title2="PAGE NOT FOUND" />
-            <img src={SMTSIcon} alt="SMTS Icon" />
-            <Button to="/home" text="Go Home" color="blue" />
-        </main>
-    );
-};
+export default function BadLink() {
+  useScrollToTop();
+  const inRouter = useInRouterContext();
+
+  return (
+    <main>
+      <PageHero Title1="ERROR 404 -" Title2="PAGE NOT FOUND" />
+      <img src={SMTSIcon} alt="SMTS Icon" />
+
+      {inRouter ? (
+        <>
+          {/* Button likely renders a <Link> internally */}
+          <Button to="/home" text="Go Home" color="blue" />
+          {/* Optional direct Link */}
+          {/* <Link to="/home">Go Home</Link> */}
+        </>
+      ) : (
+        // SSR-safe fallback if no Router context is available
+        <a href="/home" className="button_box">Go Home</a>
+      )}
+    </main>
+  );
+}
