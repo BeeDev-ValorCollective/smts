@@ -1,0 +1,16 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+#PassengerAppRoot "/home/thehives/public_html/valorSites/vallor22"
+#PassengerBaseURI "/"
+#PassengerNodejs "/home/thehives/nodevenv/public_html/valorSites/vallor22/20/bin/node"
+#PassengerAppType node
+#PassengerStartupFile vite.config.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>

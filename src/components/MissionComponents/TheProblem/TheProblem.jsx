@@ -1,3 +1,17 @@
+/**
+ * TheProblem Component
+ * 
+ * This component highlights the challenges faced by individuals, particularly seniors and veterans, in harsh winter conditions when accessing in-person tax services. 
+ * It describes a scenario where someone is injured due to winter weather and emphasizes the need for mobile tax services.
+ * 
+ * Dependencies:
+ * - CSS: './theProblem.css'
+ * - Icons:
+ *   - CarCrash: '../../../assets/images/car_fire_icon.png'
+ *   - WalkingWithCane: '../../../assets/images/walking_cane_icon.png'
+ *   - Hospital: '../../../assets/images/hospital_icon.png'
+ */
+
 // IMPORT STYLE
 import './theProblem.css'
 

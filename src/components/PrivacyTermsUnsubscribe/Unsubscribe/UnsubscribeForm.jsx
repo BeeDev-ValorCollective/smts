@@ -1,60 +1,17 @@
-/**
- * Contact Us Component
- * 
- * This component provides a contact form for users to send messages. It includes 
- * fields for the user's name, email, subject, and message. The form is validated 
- * before submission, and it also handles success and error messages with a loading 
- * spinner during submission.
- * 
- * Key Features:
- * - **Form Validation**: Uses a custom hook (`useFormValidation`) to ensure all fields are 
- *   properly filled out before submission.
- * - **Mail Submission**: Uses another custom hook (`useMailSubmission`) to handle the 
- *   form submission process. It communicates with a backend (or email service) to 
- *   send the message.
- * - **Loading Spinner**: Displays a spinner while the form is being submitted.
- * - **Error/Success Messages**: Displays appropriate messages based on the form 
- *   submission result, including a fallback email in case of failure.
- * - **Accessibility**: Includes labels for all input fields, improving accessibility.
- * 
- * Props:
- * - **None**
- * 
- * State:
- * - **`subject`** (`string`): The subject of the contact message.
- * - **`message`** (`string`): The content of the contact message.
- * - **`contact`** (`string`): The user's email address.
- * - **`userName`** (`string`): The name of the user sending the message.
- * - **`success`** (`string`): A success message after the form is successfully submitted.
- * - **`mailError`** (`string`): An error message if the mail submission fails.
- * - **`errorCount`** (`number`): A counter used to track form submission attempts.
- * - **`mailFail`** (`boolean`): A flag indicating whether the mail submission failed.
- * - **`isButtonVisible`** (`boolean`): A flag indicating whether the submit button is visible.
- * 
- * Usage:
- * This component is typically used in a contact or support page. It allows users 
- * to send their queries or messages to the support team. Upon successful submission, 
- * a success message is shown, and the user is redirected. If there is an error, 
- * the user is shown a failure message with a fallback email.
- */
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
-// IMPORT REACT MAGIC
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-
-// IMPORT STYLES
-import './contactForm.css';
-
-// IMPORT ICONS
 import Spinner from '../../../assets/images/loading_spinner.png'
+import './unsub.css'
 
-// IMPORT HOOKS
-import useFormValidation from '../ContactHooks/useFormValidation';
-import useMailSubmission from '../ContactHooks/useMailSubmission';
+import useUnsubFormValidation from "../UnsubscribeHooks/useUnsubFormValidation"
+import useUnsubMailSubmission from '../UnsubscribeHooks/useUnsubMailSubmission'
 
-export default function ContactUs() {
+export default function UnsubscribeForm() {
+
     const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState('')
+    const [phone, setPhone] = useState('');
     const [contact, setContact] = useState('');
     const [userName, setUserName] = useState('');
     const [success, setSuccess] = useState('');
@@ -62,17 +19,34 @@ export default function ContactUs() {
     const [errorCount, setErrorCount] = useState(0);
     const [mailFail, setMailFail] = useState(false);
     const [isButtonVisible, setIsButtonVisible] = useState(true);
-    const SupportEmail = import.meta.env.VITE_SUPPORT_EMAIL;
-    
-    // Custom hook for form validation
-    const isFormValid = useFormValidation({ userName, subject, message, contact });
-    
-    // Custom hook for mail submission logic
-    const { sendMail, isSubmitting } = useMailSubmission({
-        subject,
+    const SupportEmail = import.meta.env.VITE_SUPPORT_EMAIL
+
+    const isFormValid = useUnsubFormValidation({ userName, subject, contact, phone });
+
+    useEffect(() => {
+        if (subject) {
+            const subjectLower = subject.toLowerCase()
+            let baseMessage = ""
+            if (subject === "Email and Phone") {
+                baseMessage = `The following have been added to our unsubscribe list:\n\n- Email: ${contact}\n- Phone: ${phone}`
+            } else if (subject === "Email") {
+                baseMessage = `The following email has been added to our unsubscribe list:\n\n- Email: ${contact}`
+            } else if (subject === "Phone") {
+                baseMessage = `The following phone number has been added to our unsubscribe list:\n\n- Phone: ${phone}`
+            }
+            // Final message with instructions
+        const messageBody = `${baseMessage}\n\nIf you wish to remove your ${subjectLower} from this list, please email us at ${SupportEmail} or fill out our contact form at ${window.location.origin}/contact.\n\nThank you for reaching out.`;
+
+        setMessage(messageBody)
+        }
+    }, [userName, subject, message, phone, contact])
+
+    const { sendMail, isSubmitting } = useUnsubMailSubmission({
+        subject: `Unsubscribe ${subject}`,
         message,
         contact,
         userName,
+        phone,
         setSuccess,
         setMailError,
         setErrorCount,
@@ -82,14 +56,18 @@ export default function ContactUs() {
         setMessage,
         setContact,
         setUserName,
-    });
-    
-    return (
+        setPhone,
+    })
+
+    console.log('message',message, 'subject', subject)
+
+    return(
+        <>
         <div className="contact_container">
             {/* FORM SECTION */}
             <form onSubmit={sendMail}>
                 {/* TITLE SECTION */}
-                <h2>Send us a Message</h2>
+                <h2>Unsubscribe</h2>
                 {/* CLIENT NAME */}
                 <div className="entry_area">
                     <input
@@ -125,38 +103,42 @@ export default function ContactUs() {
                 {/* END CLIENT CONTACT EMAIL */}
                 {/* CLIENT SUBJECT */}
                 <div className="entry_area">
-                    <input
+                    <select
                         name="title"
-                        type="text"
                         id="title"
                         required
                         minLength={3}
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
-                        placeholder="" // Leave blank!!
-                    />
-                    <label htmlFor="title" className="label_line">
-                        Subject:
-                    </label>
+                    >
+                        <option value="" disabled>Select and Option</option>
+                        <option value="Email">Email Only</option>
+                        <option value="Phone">Phone Only</option>
+                        <option value="Email and Phone">Both Email and Phone</option>
+                    </select>
                 </div>
                 {/* END CLIENT SUBJECT */}
+                {/* CLIENT PHONE NUMBER */}
+                {(subject === "Phone" || subject === "Email and Phone") && (
+                    <div className="entry_area">
+                        <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            required={subject === "Phone" || subject === "Email and Phone"}
+                            pattern="\d{3}-?\d{3}-?\d{4}" // Adjust for your validation needs
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            placeholder=""
+                        />
+                        <label htmlFor="phone" className="label_line">
+                            Phone Number:
+                        </label>
+                    </div>
+                )}
+                {/* END CLIENT PHONE NUMBER */}
                 {/* CLIENT MESSAGE */}
-                <div className="entry_area">
-                    <textarea
-                        name="description"
-                        id="description"
-                        required
-                        minLength={5}
-                        cols={10}
-                        rows={5}
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        placeholder="" // Leave blank!!
-                    />
-                    <label htmlFor="description" className="label_line">
-                        Message:
-                    </label>
-                </div>
+                
                 {/* END CLIENT MESSAGE */}
                 {/* SUBMIT BUTTON AND SPINNER */}
                 {isSubmitting ? (
@@ -209,5 +191,6 @@ export default function ContactUs() {
             </form>
             {/* FORM SECTION */}
         </div>
-    );
-};
+        </>
+    )
+}

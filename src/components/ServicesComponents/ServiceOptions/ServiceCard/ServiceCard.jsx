@@ -37,7 +37,7 @@ export default function ServiceCard({
                 {ServicePricing.map((Price) => {
                     return (
                         <p key={ Price.item_id } className='pricing'>
-                            { Price.item_title } <span>${ Price.item_price }</span>
+                            { Price.item_title } Starting at: <span>${ Price.item_price }</span>
                         </p>
                     );
                 })}
