@@ -27,62 +27,47 @@
 import { useEffect } from 'react';
 
 
-function useUpdateMetaData(metaData) {
+function useUpdateMetaData(metaData = {}) {
   useEffect(() => {
-    // Update document title with the provided metaData
-    document.title = metaData.title;
+    // Skip entirely during SSR/prerender
+    if (typeof document === 'undefined') return;
 
-    // Update meta description tag with the provided content
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', metaData.description);
-    }
+    const {
+      title,
+      description,
+      keywords,
+      ogTitle,
+      ogDescription,
+      ogImage,
+      ogUrl,
+      twitterTitle,
+      twitterDescription,
+    } = metaData;
 
-    // Update meta keywords tag with the provided content
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', metaData.keywords);
-    }
+    // Title
+    if (title) document.title = title;
 
-    // OPEN GRAPH METADATA
-    // Update Open Graph title with the provided content
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', metaData.ogTitle);
-    }
+    // Helper to set a meta tag if both tag and content exist
+    const setMeta = (selector, content, attr = 'content') => {
+      if (!content) return;
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute(attr, content);
+    };
 
-    // Update Open Graph description with the provided content
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', metaData.ogDescription);
-    }
+    // Standard meta
+    setMeta('meta[name="description"]', description);
+    setMeta('meta[name="keywords"]', keywords);
 
-    // Update Open Graph image with the provided content
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', metaData.ogImage);
-    }
+    // Open Graph
+    setMeta('meta[property="og:title"]', ogTitle);
+    setMeta('meta[property="og:description"]', ogDescription);
+    setMeta('meta[property="og:image"]', ogImage);
+    setMeta('meta[property="og:url"]', ogUrl);
 
-    // Update Open Graph URL with the provided content
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute('content', metaData.ogUrl);
-    }
-
-    // TWITTER METADATA
-    // Update Twitter title with the provided content
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (twitterTitle) {
-      twitterTitle.setAttribute('content', metaData.twitterTitle);
-    }
-    
-    // Update Twitter description with the provided content
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (twitterDescription) {
-      twitterDescription.setAttribute('content', metaData.twitterDescription);
-    }
-    
-  }, [metaData]); // Re-run the effect whenever metaData changes
+    // Twitter
+    setMeta('meta[name="twitter:title"]', twitterTitle);
+    setMeta('meta[name="twitter:description"]', twitterDescription);
+  }, [metaData]);
 }
 
 export default useUpdateMetaData;

@@ -27,33 +27,42 @@
 
 
 // Import React Magic
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router'; // v7 server-safe import
+import { useLocation } from 'react-router-dom'; // use DOM package at runtime
 
 // Import Json File
 import LinksData from '../assets/Json/Links.json';
 
-const useLoadMetaData = () => {
 
-  // Get Route Location
-  const location = useLocation();
 
-  // Find the page data that matches the current URL path
-  const currentPage = LinksData.find(link => location.pathname.includes(link.url));
-
-  if (currentPage && currentPage.meta) {
-    return currentPage.meta;  // Return the metadata for the current page
-  }
-
-  // Fallback metadata for the homepage or a generic page
-  return {
-    title: "Seniors Mobile Tax Services",
-    description: "",
-    keywords: "",
-    ogTitle: "Seniors Mobile Tax Services",
-    ogDescription: "Seniors Mobile Tax Services",
-    ogImage: "./src/assets/images/SMTS_Icon_White.jpg",
-    ogUrl: "",
-  };
+const normalize = (p = '') => {
+  if (!p.startsWith('/')) p = '/' + p;
+  if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+  return p;
 };
 
-export default useLoadMetaData;
+export default function useLoadMetaData() {
+  const location = useLocation();
+  const path = normalize(location.pathname);
+
+  // Try exact match first, then prefix (for nested paths)
+  const currentPage =
+    LinksData.find(link => normalize(link.url) === path) ||
+    LinksData.find(link => path.startsWith(normalize(link.url)));
+
+  const meta = currentPage?.meta ?? {};
+
+  // Safe defaults (avoid undefineds)
+  return {
+    title: meta.title ?? 'Seniors Mobile Tax Services',
+    description: meta.description ?? '',
+    keywords: meta.keywords ?? '',
+    ogTitle: meta.ogTitle ?? 'Seniors Mobile Tax Services',
+    ogDescription: meta.ogDescription ?? 'Seniors Mobile Tax Services',
+    // Prefer an absolute URL in production for OG image (social scrapers)
+    ogImage: meta.ogImage ?? '/assets/SMTS_Icon_White.jpg',
+    ogUrl: meta.ogUrl ?? '',
+    twitterTitle: meta.twitterTitle,
+    twitterDescription: meta.twitterDescription,
+  };
+}

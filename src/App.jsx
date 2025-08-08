@@ -42,7 +42,9 @@
 
 // IMPORT REACT MAGIC
 import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+// import { Routes, Route, Navigate } from 'react-router-dom'
+// import { useLocation } from 'react-router'
 
 // IMPORT STYLES
 import './App.css'
@@ -52,6 +54,9 @@ const Index = React.lazy(() => import('./views/Home'));
 const Services = React.lazy(() => import('./views/Services'));
 const Contact = React.lazy(() => import('./views/Contact'));
 const Mission = React.lazy(() => import('./views/Mission'));
+const Privacy = React.lazy(() => import('./views/Privacy'))
+const Terms = React.lazy(() => import('./views/Terms'))
+const Unsubscribe = React.lazy(() => import('./views/Unsubcribe'))
 const BadLink = React.lazy(() => import('./views/BadLink'));
 
 // IMPORT COMPONENTS
@@ -66,13 +71,11 @@ import useUpdateMetaData from './customHooks/useUpdateMetaData';
 // WRAPPER TO UTILIZE THE LAZY LOADING
 function App() {
   return (
-    <BrowserRouter>
       <Suspense 
-        fallback={ <BadLink /> }
-      >
+        // fallback={ <BadLink /> }>
+          fallback={<div />}>
         <AppContent />
       </Suspense>
-    </BrowserRouter>
   );
 }
 
@@ -138,6 +141,10 @@ function AppContent() {
             <Mission />
           }
         />
+        {/* Privacy Statement */}
+        <Route path='/privacy' element={<Privacy />} />
+        <Route path='/terms' element={<Terms />} />
+        <Route path='/unsubscribe' element={<Unsubscribe />} />
 
         {/* CATCH ALL FOR BAD LINKS */}
         <Route 

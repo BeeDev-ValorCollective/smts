@@ -18,25 +18,22 @@
  * - Deploy the `dist` folder to any static hosting for SEO-friendly pages.
  */
 
-const { defineConfig } = require('vite');
-const react = require('@vitejs/plugin-react');
-const prerender = require('vite-plugin-prerender');
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { vitePrerenderPlugin } from 'vite-prerender-plugin';
+import path from 'node:path';
 
-module.exports = defineConfig({
+export default defineConfig({
   plugins: [
-    // React plugin
     react(),
-
-    // Prerender plugin configuration
-    prerender({
-      routes: [
-        '/',
-        '/home',
-        '/services',
-        '/contact',
-        '/mission',
-        // Add more routes if needed
-      ],
-    }),
+    // vitePrerenderPlugin({
+    //   // where your app mounts in index.html
+    //   renderTarget: '#root',
+    //   // absolute path to a prerender script (created below)
+    //   prerenderScript: path.resolve(process.cwd(), 'prerender.jsx'),
+    //   // optional: add routes that aren’t discoverable by links
+    //   additionalPrerenderRoutes: ['/', '/home', '/services', '/contact', '/mission'],
+    //   discoverLinks: false,
+    // }),
   ],
 });

@@ -71,7 +71,8 @@ export default function useMailSubmission({
 }) {
 
     // Get URL for fetching
-    const EmailURL = import.meta.env.VITE_EMAIL_URL;
+    const EmailURL = import.meta.env.VITE_EMAIL_URL + '/sendContactMail';
+    // console.log('EmailURL', EmailURL)
     
     // STATES
     const [isSubmitting, setIsSubmitting] = useState(false);
