@@ -52,6 +52,8 @@ export default function Footer({ currentPath }) {
                                 </Link>
                             </li>
                         ))}
+                        <Link to='/privacy'>Privacy Policy</Link>
+                        <Link to='/terms'>Terms & Conditions</Link>
                 </ul>
                 <hr />
                 {/* FOOTER EXTERNAL LINKS */}

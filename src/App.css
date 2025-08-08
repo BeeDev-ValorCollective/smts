@@ -63,7 +63,7 @@ main {
 /*                        */
 /* STANDARDIZE FONT SIZES */
 /*                        */
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, li {
   transition: all 300ms ease;
   color: var(--black);
 }
@@ -74,6 +74,7 @@ h3 { font-size: 1.1rem; }
 h4 { font-size: 1.0rem; }
 h5 { font-size: 0.9rem; }
 p { font-size: 0.85rem; }
+li { font-size: 0.85rem; }
 
 a {
   font-size: 0.85rem;
@@ -92,6 +93,7 @@ a {
   h5 { font-size: 1rem; }
   p { font-size: 1.1rem; }
   a { font-size: 1.1rem; }
+  li { font-size: 1.1rem; }
 }
 
 /* SCREEN SIZES ABOVE 1200 */
@@ -102,6 +104,7 @@ a {
   h4 { font-size: 1.295rem; }
   p { font-size: 1.265rem; }
   a { font-size: 1.265rem; }
+  li { font-size: 1.265rem; }
 }
 /*                            */
 /* END STANDARDIZE FONT SIZES */
