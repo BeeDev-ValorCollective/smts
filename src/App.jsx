@@ -56,6 +56,7 @@ const Contact = React.lazy(() => import('./views/Contact'));
 const Mission = React.lazy(() => import('./views/Mission'));
 const Privacy = React.lazy(() => import('./views/Privacy'))
 const Terms = React.lazy(() => import('./views/Terms'))
+const Unsubscribe = React.lazy(() => import('./views/Unsubcribe'))
 const BadLink = React.lazy(() => import('./views/BadLink'));
 
 // IMPORT COMPONENTS
@@ -143,6 +144,7 @@ function AppContent() {
         {/* Privacy Statement */}
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<Terms />} />
+        <Route path='/unsubscribe' element={<Unsubscribe />} />
 
         {/* CATCH ALL FOR BAD LINKS */}
         <Route 
