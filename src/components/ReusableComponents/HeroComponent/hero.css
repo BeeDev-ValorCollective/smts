@@ -1,0 +1,48 @@
+/* HERO SECTION */
+.page_hero {
+    height: 100px;
+    
+    img {
+        width: 100dvw;
+        height: 100px;
+        opacity: .5;
+    }
+    
+    h1 {
+        position: relative;
+        top: -85px;
+        text-align: center;
+        line-height: 2rem;
+        text-shadow: 0 0 5px #fff;
+        
+        span {
+            margin-left: 6px;
+            font-size: 45%;
+            font-weight: 500;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            font-style: italic;
+        }
+    }
+    
+    p {
+        position: relative;
+        top: -98px;
+        left: 15%;
+        text-align: center;
+        font-weight: 700;
+        text-shadow: 0 0 5px #fff;
+    }
+}
+
+@media only screen and (min-width: 559px) {
+    .page_hero {
+        h1 {
+            top:-75px
+        }
+        p {
+            top: -80px;
+            left: 20%;
+        }
+    }
+}
+/* END HERO SECTION */

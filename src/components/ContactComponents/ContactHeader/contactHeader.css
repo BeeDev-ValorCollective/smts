@@ -1,0 +1,85 @@
+/* CONTACT HEADER STYLES */
+
+.contact_header {
+    margin: 36px 0;
+    padding: 0 36px;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    p {
+        text-align: center;
+        margin: 8px 0;
+    }
+    
+    .contact_methods {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        .contact_type {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            
+            img {
+                height: 140px;
+                margin: 36px 0 0
+            }
+            
+            h4 {
+                line-height: 100%;
+                width: 80%;
+                text-align: center;
+                margin-bottom: 8px;
+                padding-bottom: 4px;
+                border-bottom: 3px solid var(--red);
+            }
+        }
+    }
+}
+
+.message_hr {
+    margin: 24px 0 8px;
+    width: 100%;
+
+    hr {
+        width: 90%;
+        margin: 0 auto;
+        height: 3px;
+        background-color: var(--red);
+        border: none;
+        border-radius: 8px;
+    }
+
+    p {
+        position: relative;
+        top: -13px;
+        text-align: center;
+        font-size: 1rem;
+        background-color: var(--background);
+        width: 220px;
+        margin: 0 auto;
+    }
+
+    p:nth-last-child(1) {
+        font-size: 0.65rem;
+        min-width: 280px;
+        padding: 0 8px;
+        width: 80%;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .contact_header .contact_methods {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
