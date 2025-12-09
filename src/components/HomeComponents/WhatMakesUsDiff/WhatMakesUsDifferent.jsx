@@ -88,7 +88,7 @@ export default function WhatMakesUsDifferent() {
                     </div>
                     <div className='box_body'>
                         <p>
-                            SMTS provides a private and comfortable tax preparation experience, with secure processing and an in-home review to ensure clients understand their return. The service is transparent, personalized, and offered at a flat rate of $225.
+                            SMTS provides a private and comfortable tax preparation experience, with secure processing and an in-home review to ensure clients understand their return. The service is transparent, personalized, and offered at a flat rate of $250.
                         </p>
                     </div>
                 </div>
