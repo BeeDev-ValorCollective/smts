@@ -75,6 +75,8 @@ h4 { font-size: 1.0rem; }
 h5 { font-size: 0.9rem; }
 p { font-size: 0.85rem; }
 li { font-size: 0.85rem; }
+th { font-size: .9rem; }
+td { font-size: .85rem; }
 
 a {
   font-size: 0.85rem;
@@ -94,6 +96,8 @@ a {
   p { font-size: 1.1rem; }
   a { font-size: 1.1rem; }
   li { font-size: 1.1rem; }
+  th { font-size: 1.125rem; }
+  td { font-size: 1.1rem; }
 }
 
 /* SCREEN SIZES ABOVE 1200 */
@@ -105,6 +109,8 @@ a {
   p { font-size: 1.265rem; }
   a { font-size: 1.265rem; }
   li { font-size: 1.265rem; }
+  th { font-size: 1.295rem; }
+  td { font-size: 1.265rem; }
 }
 /*                            */
 /* END STANDARDIZE FONT SIZES */

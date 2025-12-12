@@ -18,7 +18,7 @@ export default function SingleBenefits() {
             </tr>
             <tr>
                 <td>Under 65</td>
-                <td>%15,750</td>
+                <td>$15,750</td>
                 <td>N/A</td>
                 <td>N/A</td>
                 <td>$15,700</td>
@@ -35,6 +35,8 @@ export default function SingleBenefits() {
                 <td>Can you itemize?</td>
             </tr>
         </table>
+        
+        <p><strong>Note:</strong> If your adjusted gross income (AGI) exceeds $75,000, you will begin losing the deductions.</p>
         </>
     )
 }

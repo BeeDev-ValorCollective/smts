@@ -81,6 +81,9 @@ export default function DocPrepModal () {
         setIsOpen(false);
     }
     
+    const home = new Date().getFullYear() - 1
+    const federal = new Date().getFullYear() - 2
+
     return (
     
         <>
@@ -162,7 +165,7 @@ export default function DocPrepModal () {
                             </li>
                             <li>
                                 <p className='red_check'>
-                                    Did you sell your home in 2025? Any improvements? Need that HUD-1 statement to determine whether you had a capital gain.
+                                    Did you sell your home in {home}? Any improvements? Need that HUD-1 statement to determine whether you had a capital gain.
                                 </p>
                             </li>
                             <li>
@@ -172,7 +175,7 @@ export default function DocPrepModal () {
                             </li>
                             <li>
                                 <p className='red_check'>
-                                    Where is your 2024 federal and state income tax return?
+                                    Where is your {federal} federal and state income tax return?
                                 </p>
                             </li>
                         </ul>

@@ -60,6 +60,21 @@
             "twitterTitle": "Contact Seniors Mobile Tax Services | In-Home Tax Services Appointment",
             "twitterDescription": "Need tax help? Contact Thad at Seniors Mobile Tax Services in Richmond, VA for a stress-free in-home tax experience. Schedule your appointment now."
         }
+    },
+    {
+        "id": 5,
+        "url": "/highlights",
+        "name": "Tax Highlights",
+        "meta": {
+            "title": "Tax Highlights | Schedule Your Appointment Today",
+            "description": "",
+            "keywords": "",
+            "ogTitle": "",
+            "ogDescription": "",
+            "ogUrl": "https://seniorsmobiletaxservices.com/highlights",
+            "twitterTitle": "Tax Highlights Seniors Mobile Tax Services | In-Home Tax Services Appointment",
+            "twitterDescription": ""
+        }
     }
     
 ]

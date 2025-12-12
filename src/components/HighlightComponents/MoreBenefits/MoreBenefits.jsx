@@ -38,7 +38,7 @@ export default function MoreBenefits() {
         <>
         {tidbits.map((tidbit) => {
             return (
-                <div>
+                <div className="bits">
                     <h2>{tidbit.tidbit_title}</h2>
                     <p>{tidbit.tidbit_desc}</p>
                 </div>

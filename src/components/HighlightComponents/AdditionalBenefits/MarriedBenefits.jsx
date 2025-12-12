@@ -6,7 +6,7 @@ export default function MarriedBenefits() {
     return(
         <>
         <h2>For the Married folks</h2>
-        <p>For married couples, “Taxpayer 1” and “Taxpayer 2” are just placeholders – it does not matter who is the primary earner or head of household. Only the ages matter.</p>
+        <p className="married">For married couples, “Taxpayer 1” and “Taxpayer 2” are just placeholders – it does not matter who is the primary earner or head of household. Only the ages matter.</p>
         <table>
             <tr>
                 <th>Taxpayer 1 Age</th>
@@ -45,8 +45,7 @@ export default function MarriedBenefits() {
                 <td>$150,000</td>
             </tr>
         </table>
-        <strong><h3>Note:</h3></strong>
-        <p>If your adjusted gross income (AGI) exceeds $150,000, you will begin losing the deductions.</p>
+        <p><strong>Note:</strong> If your adjusted gross income (AGI) exceeds $150,000, you will begin losing the deductions.</p>
         </>
     )
 }
