@@ -155,7 +155,7 @@ export default function DocPrepModal () {
                             </li>
                             <li>
                                 <p className='red_check'>
-                                    Intestments: Need the transaction documents for date of purchase, date sold, cost at purchase, selling price. Did you purchase or sell any cryptocurrency?
+                                    Investments: Need the transaction documents for date of purchase, date sold, cost at purchase, selling price. Did you purchase or sell any cryptocurrency?
                                 </p>
                             </li>
                             <li>
