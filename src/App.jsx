@@ -54,6 +54,7 @@ const Index = React.lazy(() => import('./views/Home'));
 const Services = React.lazy(() => import('./views/Services'));
 const Contact = React.lazy(() => import('./views/Contact'));
 const Mission = React.lazy(() => import('./views/Mission'));
+const Accolades = React.lazy(() => import('./views/Accolades'));
 const Privacy = React.lazy(() => import('./views/Privacy'))
 const Terms = React.lazy(() => import('./views/Terms'))
 const Unsubscribe = React.lazy(() => import('./views/Unsubcribe'))
@@ -141,6 +142,14 @@ function AppContent() {
             <Mission />
           }
         />
+
+        <Route
+          path='/accolades'
+          element={
+            <Accolades/>
+          }
+        />
+
         {/* Privacy Statement */}
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/terms' element={<Terms />} />

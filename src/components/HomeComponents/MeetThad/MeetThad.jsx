@@ -29,7 +29,7 @@ import userIcon from "../../../assets/images/MeetThad.jpg"
 
 export default function MeetThad() {
 
-    const years = new Date().getFullYear() - 2007
+    const years = new Date().getFullYear() - 2006
     
     return(
         <div className='meet_thad'>
@@ -39,16 +39,13 @@ export default function MeetThad() {
                 <h2>
                     Thad A. Jones -&nbsp;
                     <br className="mobile_only" />
-                    EA, CAA & Notary
+                    EA, CAA & Notary Public
                 </h2>
                 <h4>
-                    Founder & Owner
+                    Founder & Mobile Tax Practitioner
                 </h4>
-                <h5>
-                    Veteran Owned & Operated Business
-                </h5>
                 <p>
-                    With over {years} years of experience as a tax practitioner.  He is dedicated to providing expert and reliable tax preparation services to his clients. He is a member of the NAEA and VASEA. Additionally, he is a commissioned notary for the Commonwealth of Virginia. He is a certified acceptance agent having processed over 200-ITINs since 2016.
+                    With over {years} years of experience as a tax practitioner.  He is dedicated to providing expert and reliable tax preparation services to his clients. He is a member of the National Association of Enrolled Agents (NAEA) and Virginia Society of Enrolled Agents (VASEA). Additionally, he is a Commonwealth of Virginia Commissioned Notary Public. He is a Certified Acceptance Agent (CAA), having processed hundreds of Individual Taxpayer Identification Number (ITIN) applications. He is a retired Army Veteran and retired from law enforcement profession. SMTS is State certified as a Small, Women and Minority (SWaM) and Service Disabled Veteran Owned Business (SDVOB).
                 </p>
             </div>
         </div>

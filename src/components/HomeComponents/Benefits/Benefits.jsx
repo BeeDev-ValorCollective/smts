@@ -56,7 +56,7 @@ export default function Benefits() {
                     NO HIDDEN <br />FEES
                 </h5>
                 <p>
-                    You receive access to all federal forms and deductions without any extra fees or hidden costs.
+                    You receive access to all federal and state forms and deductions without any extra fees or hidden costs.
                 </p>
             </div>
             {/* SECTION 3 */}

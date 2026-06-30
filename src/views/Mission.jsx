@@ -28,7 +28,6 @@
 
 
 // IMPORT SUBCOMPONENTS
-import MissionFooter from "../components/MissionComponents/MissionFooter/MissionFooter";
 import MissionHeader from "../components/MissionComponents/MissionHeader/MissionHeader";
 import TheSolution from "../components/MissionComponents/The Solution/TheSolution";
 import TheProblem from "../components/MissionComponents/TheProblem/TheProblem";
@@ -47,7 +46,6 @@ export default function About() {
             <MissionHeader />
             <TheProblem />
             <TheSolution />
-            <MissionFooter />
         </main>
     );
 };

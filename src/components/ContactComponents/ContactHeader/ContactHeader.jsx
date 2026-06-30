@@ -48,9 +48,6 @@ export default function ContactHeader() {
         <>
             <div className='contact_header'>
                 <p>
-                    For reliable and convenient tax services, contact Thad at Seniors Mobile Tax Services LLC.
-                </p>
-                <p>
                     Call today to schedule your appointment or ask any questions you may have — Thad is here to help!
                 </p>
                 <div className='contact_methods'>
@@ -69,13 +66,6 @@ export default function ContactHeader() {
                         </a>
                     </div>
                 </div>
-            </div>
-            <div className="message_hr">
-                <hr />
-                <p>
-                    Or send us a message
-                </p>
-                <p>(To make sure you don’t miss any messages, please add us to your email contacts. That way, our emails will drive straight into your inbox!)</p>
             </div>
         </>
     );

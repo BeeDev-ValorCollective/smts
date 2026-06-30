@@ -70,9 +70,9 @@ export default function ServiceCardHeader() {
             {/* JUMP LINKS */}
             <p className='option_header'><b>Explore our services below:</b></p>
             <ul className='service_jump_links'>
-                <li onClick={(e) => handleClick(e, "tax_services")}>E-File</li>
-                <li onClick={(e) => handleClick(e, "itin_services")}>ITIN</li>
-                <li onClick={(e) => handleClick(e, "notary_services")}>Notary</li>
+                <li onClick={(e) => handleClick(e, "tax_services")}>Tax Services</li>
+                <li onClick={(e) => handleClick(e, "itin_services")}>ITIN Services</li>
+                <li onClick={(e) => handleClick(e, "notary_services")}>Notary Public Services</li>
             </ul>
             {/* END JUMP LINKS */}
         </div>

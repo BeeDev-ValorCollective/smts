@@ -102,7 +102,7 @@ export default function WhatMakesUsDifferent() {
                     </div>
                     <div className='box_body'>
                         <p>
-                            SMTS offers specialized services, including Certified Acceptance Agent (CAA) assistance for Individual Taxpayer Identification Number (ITIN) applications, notary public services, and IRS-authorized electronic filing. These additional services cater to a wide range of client needs with expertise and convenience.
+                            SMTS offers specialized services, including Certified Acceptance Agent (CAA) assistance for Individual Taxpayer Identification Number (ITIN) applications, notary public services, and Foriegn Bank and Financial Accounts(FBAR) FinCen Form 114 filing. These additional services cater to a wide range of client needs with expertise and convenience.
                         </p>
                     </div>
                 </div>
