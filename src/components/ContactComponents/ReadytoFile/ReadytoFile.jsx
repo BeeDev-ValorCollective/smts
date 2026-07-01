@@ -44,7 +44,7 @@
  */
 
 // IMPORT STYLE
-import './missionFooter.css'
+import './ReadytoFile.css'
 
 // IMPORT IMAGES
 import MX5 from '../../../assets/images/mx5_icon.png'
@@ -52,10 +52,10 @@ import MX5 from '../../../assets/images/mx5_icon.png'
 // IMPORT SUBCOMPONENTS
 import Button from '../../ReusableComponents/ButtonComponent/Button'
 
-export default function MissionFooter() {
+export default function ReadytoFile() {
     
     return(
-            <div className='mission_footer'>
+            <div className='ready_to_file'>
                 <h2>Ready To File?</h2>
                 <p>
                     Relax, enjoy your favorite daytime TV shows, and let SMTS handle the rest. Professional, convenient, and designed with seniors and veterans in mind.
@@ -67,7 +67,13 @@ export default function MissionFooter() {
                     <b>Seniors Mobile Tax Services</b>
                 </p>
                 <img src={ MX5 } alt="SMTS Miata" />
-                <Button to="/contact" text="Contact Us" color="red" />
+                <div className="message_hr">
+                    <hr />
+                    <p>
+                        Or send us a message
+                    </p>
+                    <p>(To make sure you don’t miss any messages, please add us to your email contacts. That way, our emails will drive straight into your inbox!)</p>
+                </div>
             </div>
     );
 };

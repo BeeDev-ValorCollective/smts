@@ -27,6 +27,7 @@
 import ContactForm from "../components/ContactComponents/ContactForm/ContactForm";
 import ContactHeader from "../components/ContactComponents/ContactHeader/ContactHeader";
 import PageHero from "../components/ReusableComponents/HeroComponent/Hero";
+import ReadytoFile from "../components/ContactComponents/ReadytoFile/ReadytoFile";
 
 // Import Custom Hooks
 import useScrollToTop from "../customHooks/useScrollToTop";
@@ -39,6 +40,7 @@ export default function Contact() {
         <main>
             <PageHero Title1="Contact Us" />
             <ContactHeader />
+            <ReadytoFile />
             <ContactForm />
         </main>
     );
