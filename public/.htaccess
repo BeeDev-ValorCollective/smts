@@ -1,7 +1,7 @@
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
-#PassengerAppRoot "/home/thehives/public_html/valorSites/vallor22"
+#PassengerAppRoot "/home/smts/public_html"
 #PassengerBaseURI "/"
-#PassengerNodejs "/home/thehives/nodevenv/public_html/valorSites/vallor22/20/bin/node"
+#PassengerNodejs "/home/smts/nodevenv/public_html/20/bin/node"
 #PassengerAppType node
 #PassengerStartupFile vite.config.js
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

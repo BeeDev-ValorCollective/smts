@@ -81,6 +81,9 @@ export default function DocPrepModal () {
         setIsOpen(false);
     }
     
+    const home = new Date().getFullYear() - 1
+    const federal = new Date().getFullYear() - 2
+
     return (
     
         <>
@@ -152,7 +155,7 @@ export default function DocPrepModal () {
                             </li>
                             <li>
                                 <p className='red_check'>
-                                    Intestments: Need the transaction documents for date of purchase, date sold, cost at purchase, selling price. Did you purchase or sell any cryptocurrency?
+                                    Investments: Need the transaction documents for date of purchase, date sold, cost at purchase, selling price. Did you purchase or sell any cryptocurrency?
                                 </p>
                             </li>
                             <li>
@@ -162,7 +165,7 @@ export default function DocPrepModal () {
                             </li>
                             <li>
                                 <p className='red_check'>
-                                    Did you sell your home in 2024? Any improvements? Need that HUD-1 statement to determine whether you had a capital gain.
+                                    Did you sell your home in {home}? Any improvements? Need that HUD-1 statement to determine whether you had a capital gain.
                                 </p>
                             </li>
                             <li>
@@ -172,7 +175,7 @@ export default function DocPrepModal () {
                             </li>
                             <li>
                                 <p className='red_check'>
-                                    Where is your 2023 federal and state income tax return?
+                                    Where is your {federal} federal and state income tax return?
                                 </p>
                             </li>
                         </ul>

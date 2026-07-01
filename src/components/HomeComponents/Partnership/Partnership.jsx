@@ -96,7 +96,7 @@ export default function Partnership() {
                         <li>
                             <img src={ CalendarIcon } alt="Calendar Icon" />
                             <p>
-                                Check in throughut the year to continue building trust 
+                                Check in throughout the year to continue building trust 
                             </p>
                         </li>
                     </ul>
@@ -123,7 +123,7 @@ export default function Partnership() {
                             <li>
                                 <img src={ IdeaIcon } alt="Chat Icon" />
                                 <p>
-                                    Provide tax inside and advice to help clients with tax avoidance stratagies, but never promote tax evasion schemes
+                                    Provide tax tidbits to help clients with paying only the taxes owed. We will never promote tax evasion schemes.
                                 </p>
                             </li>
                         </ul>

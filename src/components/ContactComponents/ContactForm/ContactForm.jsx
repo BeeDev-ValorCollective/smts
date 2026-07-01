@@ -1,54 +1,11 @@
-/**
- * Contact Us Component
- * 
- * This component provides a contact form for users to send messages. It includes 
- * fields for the user's name, email, subject, and message. The form is validated 
- * before submission, and it also handles success and error messages with a loading 
- * spinner during submission.
- * 
- * Key Features:
- * - **Form Validation**: Uses a custom hook (`useFormValidation`) to ensure all fields are 
- *   properly filled out before submission.
- * - **Mail Submission**: Uses another custom hook (`useMailSubmission`) to handle the 
- *   form submission process. It communicates with a backend (or email service) to 
- *   send the message.
- * - **Loading Spinner**: Displays a spinner while the form is being submitted.
- * - **Error/Success Messages**: Displays appropriate messages based on the form 
- *   submission result, including a fallback email in case of failure.
- * - **Accessibility**: Includes labels for all input fields, improving accessibility.
- * 
- * Props:
- * - **None**
- * 
- * State:
- * - **`subject`** (`string`): The subject of the contact message.
- * - **`message`** (`string`): The content of the contact message.
- * - **`contact`** (`string`): The user's email address.
- * - **`userName`** (`string`): The name of the user sending the message.
- * - **`success`** (`string`): A success message after the form is successfully submitted.
- * - **`mailError`** (`string`): An error message if the mail submission fails.
- * - **`errorCount`** (`number`): A counter used to track form submission attempts.
- * - **`mailFail`** (`boolean`): A flag indicating whether the mail submission failed.
- * - **`isButtonVisible`** (`boolean`): A flag indicating whether the submit button is visible.
- * 
- * Usage:
- * This component is typically used in a contact or support page. It allows users 
- * to send their queries or messages to the support team. Upon successful submission, 
- * a success message is shown, and the user is redirected. If there is an error, 
- * the user is shown a failure message with a fallback email.
- */
 
-// IMPORT REACT MAGIC
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-// IMPORT STYLES
 import './contactForm.css';
 
-// IMPORT ICONS
 import Spinner from '../../../assets/images/loading_spinner.png'
 
-// IMPORT HOOKS
 import useFormValidation from '../ContactHooks/useFormValidation';
 import useMailSubmission from '../ContactHooks/useMailSubmission';
 
@@ -63,6 +20,13 @@ export default function ContactUs() {
     const [mailFail, setMailFail] = useState(false);
     const [isButtonVisible, setIsButtonVisible] = useState(true);
     const SupportEmail = import.meta.env.VITE_SUPPORT_EMAIL;
+
+    const [captchaQuestion, setCaptchaQuestion] = useState('');
+    const [captchaId, setCaptchaId] = useState('');
+    const [captchaAnswer, setCaptchaAnswer] = useState('');
+    const [isCaptchaLoading, setIsCaptchaLoading] = useState(false);
+    const [captchaLoadError, setCaptchaLoadError] = useState('');
+    const [website, setWebsite] = useState('')
     
     // Custom hook for form validation
     const isFormValid = useFormValidation({ userName, subject, message, contact });
@@ -73,6 +37,9 @@ export default function ContactUs() {
         message,
         contact,
         userName,
+        captchaId,
+        captchaAnswer,
+        website,
         setSuccess,
         setMailError,
         setErrorCount,
@@ -82,7 +49,37 @@ export default function ContactUs() {
         setMessage,
         setContact,
         setUserName,
+        setCaptchaAnswer,
     });
+
+        useEffect(() => {
+        const fetchCaptcha = async () => {
+            try {
+                setIsCaptchaLoading(true);
+                setCaptchaLoadError('');
+
+                // Adjust base URL if needed
+                const apiBase = import.meta.env.VITE_EMAIL_URL || '';
+                const response = await fetch(`${apiBase}/captcha`);
+                console.log(response)
+                if (!response.ok) {
+                    throw new Error('Failed to load captcha');
+                }
+
+                const data = await response.json(); // { id, question }
+                setCaptchaId(data.id);
+                setCaptchaQuestion(data.question);
+                setCaptchaAnswer('');
+            } catch (err) {
+                console.error('Error loading captcha:', err);
+                setCaptchaLoadError('Unable to load spam protection. Please try again.');
+            } finally {
+                setIsCaptchaLoading(false);
+            }
+        };
+
+        fetchCaptcha();
+    }, []);
     
     return (
         <div className="contact_container">
@@ -158,6 +155,40 @@ export default function ContactUs() {
                     </label>
                 </div>
                 {/* END CLIENT MESSAGE */}
+
+                {/* HONEYPOT FIELD (hidden from humans, visible to bots) */}
+                <input
+                    type="text"
+                    name="website"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                    autoComplete="off"
+                    style={{ display: 'none' }}
+                    tabIndex={-1}
+                />
+                {/* END HONEYPOT FIELD */}
+                {/* CAPTCHA FIELD */}
+                <div className="entry_area captcha">
+                    <label className="label_line" htmlFor="captchaAnswer">
+                        {isCaptchaLoading
+                            ? 'Loading spam protection...'
+                            : captchaQuestion || 'Spam protection'}
+                    </label>
+                    <input
+                        name="captchaAnswer"
+                        type="text"
+                        id="captchaAnswer"
+                        required
+                        value={captchaAnswer}
+                        onChange={(e) => setCaptchaAnswer(e.target.value)}
+                        placeholder="" // Leave blank!!
+                        disabled={isCaptchaLoading || !captchaId}
+                    />
+                    {captchaLoadError && (
+                        <p className="captcha_error">{captchaLoadError}</p>
+                    )}
+                </div>
+                {/* CAPTCHA FIELD */}
                 {/* SUBMIT BUTTON AND SPINNER */}
                 {isSubmitting ? (
                     <div className="form_button_box">

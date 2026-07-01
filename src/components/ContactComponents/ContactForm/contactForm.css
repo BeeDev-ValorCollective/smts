@@ -121,6 +121,9 @@
             }
             
         }
+        .captcha {
+                margin-top: 5em;
+            }
         
         .form_button_box {
             margin-top: 50px;
