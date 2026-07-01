@@ -8,7 +8,7 @@
         "service_pricing":[
             {"item_id": 1,
             "item_title": "E-File",
-            "item_price": "225.00"
+            "item_price": "250.00"
             }
         ],
         "isActive": true
@@ -22,39 +22,11 @@
         "service_pricing":[
             {"item_id": 1,
             "item_title": "One W7",
-            "item_price": "200"
+            "item_price": "300"
             },
             {"item_id": 2,
-            "item_title": "Two W7",
-            "item_price": "300"
-            },
-            {"item_id": 3,
-            "item_title": "Three W7",
-            "item_price": "400"
-            },
-            {"item_id": 4,
             "item_title": "One W7(COA)",
-            "item_price": "250"
-            },
-            {"item_id": 5,
-            "item_title": "Two W7(COA)",
-            "item_price": "350"
-            },
-            {"item_id": 6,
-            "item_title": "Three W7(COA)",
-            "item_price": "450"
-            },
-            {"item_id": 7,
-            "item_title": "One W7 and one W7(COA)",
             "item_price": "300"
-            },
-            {"item_id": 8,
-            "item_title": "Two W7 and two W7(COA)",
-            "item_price": "400"
-            },
-            {"item_id": 9,
-            "item_title": "Three W7 and three W7(COA)",
-            "item_price": "500"
             }
         ],
         "isActive": true
@@ -64,7 +36,7 @@
         "id_tag": "notary_services",
         "img_ref": "CheckmarkIcon",
         "service_title": "Notary Services",
-        "service_desc": "SMTS provides professional notary services to meet your legal documentation needs. As a Virginia notary, we can serve as an unbiased witness for signatures, oaths, and acknowledgments on important legal documents. With a fee of just $10 per notarial act, SMTS offers reliable and convenient service anywhere within the Commonwealth of Virginia.",
+        "service_desc": "SMTS provides professional notary services to meet your legal documentation needs. As a Virginia notary, we can serve as an unbiased witness for signatures, oaths, and acknowledgments on important legal documents. With a fee of just $10 per notarial act, SMTS offers reliable and convenient service anywhere within the city of Richmond, Virginia.",
         "service_pricing":[
             {"item_id": 1,
             "item_title": "Notary / per request",
