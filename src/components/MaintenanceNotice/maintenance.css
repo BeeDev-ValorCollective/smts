@@ -1,0 +1,140 @@
+/* ─── MaintenanceNotice ─────────────────────────────────────────────────────
+   Scrolling maintenance banner. Sits at the very top of the viewport,
+   above everything else. Severity variants: info | warning | danger
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.maint-notice {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  border-bottom: 1px solid transparent;
+}
+
+/* ── Severity colours ── */
+.maint-notice--info {
+  background-color: #dbeafe;
+  color: #1e3a5f;
+  border-bottom-color: #93c5fd;
+}
+
+.maint-notice--warning {
+  background-color: #fef3c7;
+  color: #451a03;
+  border-bottom-color: #fcd34d;
+}
+
+.maint-notice--danger {
+  background-color: #fee2e2;
+  color: #450a0a;
+  border-bottom-color: #fca5a5;
+}
+
+/* ── Scrolling track ── */
+.maint-notice__track {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.maint-notice__scroll {
+  display: inline-flex;
+  animation: maint-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.maint-notice__scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes maint-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Segment (message unit, duplicated for loop) ── */
+.maint-notice__segment {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 3rem;
+}
+
+.maint-notice__icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.maint-notice__message {
+  letter-spacing: 0.01em;
+}
+
+.maint-notice__spacer {
+  opacity: 0.35;
+  letter-spacing: 4px;
+  margin: 0 1rem;
+}
+
+/* ── Status page link ── */
+.maint-notice__link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  opacity: 0.85;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.maint-notice__link:hover {
+  opacity: 1;
+}
+
+.maint-notice--info    .maint-notice__link { color: #1e40af; }
+.maint-notice--warning .maint-notice__link { color: #92400e; }
+.maint-notice--danger  .maint-notice__link { color: #991b1b; }
+
+/* ── Dismiss button ── */
+.maint-notice__dismiss {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0.55;
+  transition: opacity 0.15s, background 0.15s;
+  padding: 0;
+}
+
+.maint-notice__dismiss:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.maint-notice--info    .maint-notice__dismiss { color: #1e3a5f; }
+.maint-notice--warning .maint-notice__dismiss { color: #451a03; }
+.maint-notice--danger  .maint-notice__dismiss { color: #450a0a; }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .maint-notice__scroll {
+    animation: none;
+  }
+
+  .maint-notice__segment + .maint-notice__segment {
+    display: none;
+  }
+}

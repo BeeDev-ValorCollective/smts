@@ -65,6 +65,7 @@ const BadLink = React.lazy(() => import('./views/BadLink'));
 import NavBar from './components/NavBar/Navbar';
 import Footer from './components/Footer/Footer';
 import ScrollUpButton from './components/ScrollUpComponent/ScrollUp';
+import MaintenanceNotice from './components/MaintenanceNotice'
 
 // Import custom hooks
 import useLoadMetaData from './customHooks/useLoadMetaData';
@@ -95,6 +96,7 @@ function AppContent() {
 
   return (
     <div className="app_wrapper">
+      <MaintenanceNotice />
 
       {/* NAVBAR COMPONENT */}
       <NavBar 
