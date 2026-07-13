@@ -44,7 +44,7 @@ export default function Navbar({ currentPath }) {
                 <ul>
                     {Links
                         // filter out the path of the current view page
-                        .filter(link => link.url !== currentPath)
+                        // .filter(link => link.url !== currentPath)
                         .map(link => (
                             <li key={ link.id }>
                                 <Link to={ link.url }>
