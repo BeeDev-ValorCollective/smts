@@ -1,6 +1,50 @@
+/**
+ * App Component
+ * 
+ * This is the main application component that serves as the entry point to the website. It uses React Router for 
+ * routing and lazy loading to optimize performance by loading views only when necessary. The app is wrapped in 
+ * a `BrowserRouter` for routing, and components like `NavBar`, `Footer`, and `ScrollUpButton` are included for 
+ * navigation and usability.
+ * 
+ * Key Features:
+ * - **Lazy Loading**: The app utilizes React's `React.lazy` for dynamically importing view components (`Home`, 
+ *   `Services`, `Contact`, `Mission`, and `BadLink`) to improve initial load time.
+ * - **Routing**: Routes are managed using `React Router`, which enables navigation between different views. It also 
+ *   handles a fallback route (`BadLink`) for invalid URLs.
+ * - **Meta Data Management**: Custom hooks (`useLoadMetaData` and `useUpdateMetaData`) are used to fetch and update 
+ *   the document title and meta tags for each page based on dynamic data.
+ * - **Navigation Bar**: The `NavBar` component is included to allow users to navigate between different pages of the app.
+ * - **Scroll Up Button**: A `ScrollUpButton` component is included to allow users to scroll back to the top of the page.
+ * - **Footer**: The `Footer` component provides additional information or links at the bottom of the page.
+ * 
+ * Subcomponents:
+ * - **NavBar**: A component that renders the navigation bar and highlights the current page based on the `location.pathname`.
+ * - **Footer**: A footer component that adjusts its content based on the current page URL.
+ * - **ScrollUpButton**: A button component that appears when the user scrolls down, allowing them to scroll back to the top.
+ * - **BadLink**: A fallback component displayed when the user attempts to access a non-existent route.
+ * 
+ * Custom Hooks:
+ * - **useLoadMetaData**: A custom hook responsible for fetching metadata, which includes document title and meta tags for SEO.
+ * - **useUpdateMetaData**: A custom hook that updates the document’s title and meta tags based on the metadata fetched.
+ * 
+ * Routing:
+ * - **Home** (`/home`): The landing page of the application, where users are introduced to the core features.
+ * - **Services** (`/services`): The page listing all available services provided by the organization.
+ * - **Contact** (`/contact`): The contact form page, allowing users to reach out for inquiries or support.
+ * - **Mission** (`/mission`): A page describing the organization's mission, goals, and the problems it aims to solve.
+ * - **BadLink** (`*`): A catch-all route that displays the `BadLink` component for invalid URLs.
+ * 
+ * Usage:
+ * The `App` component sets up routing and lazy loads the main views. It provides a consistent navigation experience 
+ * with dynamic metadata management, ensuring users always have the latest context and SEO information for each page. 
+ * The page structure is flexible, allowing for easy updates and additions of new routes or components.
+ **/
+
 // IMPORT REACT MAGIC
 import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+// import { Routes, Route, Navigate } from 'react-router-dom'
+// import { useLocation } from 'react-router'
 
 // IMPORT STYLES
 import './App.css'
@@ -9,7 +53,12 @@ import './App.css'
 const Index = React.lazy(() => import('./views/Home'));
 const Services = React.lazy(() => import('./views/Services'));
 const Contact = React.lazy(() => import('./views/Contact'));
-const About = React.lazy(() => import('./views/About'));
+const Mission = React.lazy(() => import('./views/Mission'));
+const Hightlights = React.lazy(() => import('./views/Highlights'))
+const Accolades = React.lazy(() => import('./views/Accolades'));
+const Privacy = React.lazy(() => import('./views/Privacy'))
+const Terms = React.lazy(() => import('./views/Terms'))
+const Unsubscribe = React.lazy(() => import('./views/Unsubcribe'))
 const BadLink = React.lazy(() => import('./views/BadLink'));
 
 // IMPORT COMPONENTS
@@ -24,14 +73,11 @@ import useUpdateMetaData from './customHooks/useUpdateMetaData';
 // WRAPPER TO UTILIZE THE LAZY LOADING
 function App() {
   return (
-    <BrowserRouter>
       <Suspense 
-        // this can be replaced with a spinner or something more exciting at some point
-        fallback={ <BadLink /> }
-      >
+        // fallback={ <BadLink /> }>
+          fallback={<div />}>
         <AppContent />
       </Suspense>
-    </BrowserRouter>
   );
 }
 
@@ -90,13 +136,33 @@ function AppContent() {
           }
         />
 
-        {/* ABOUT */}
-        <Route 
-          path='/aboutus'
+        {/* HIGHLIGHTS PAGE */}
+        <Route
+          path='/highlights'
           element={
-            <About />
+            <Hightlights />
+          }
+          />
+
+        {/* MISSION PAGE */}
+        <Route 
+          path='/mission'
+          element={
+            <Mission />
           }
         />
+
+        <Route
+          path='/accolades'
+          element={
+            <Accolades/>
+          }
+        />
+
+        {/* Privacy Statement */}
+        <Route path='/privacy' element={<Privacy />} />
+        <Route path='/terms' element={<Terms />} />
+        <Route path='/unsubscribe' element={<Unsubscribe />} />
 
         {/* CATCH ALL FOR BAD LINKS */}
         <Route 

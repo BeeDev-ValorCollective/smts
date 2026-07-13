@@ -1,20 +1,15 @@
-/**
- * Custom hook for handling mail submission.
- * @param {Object} params - Parameters for the hook.
- * @returns {Object} { sendMail, isSubmitting } - The mail submission handler and submission status.
-*/
 
-
-// IMPORT REACT MAGIC
 import { useState } from 'react';
 import axios from 'axios';
-
 
 export default function useMailSubmission({
     subject,
     message,
     contact,
     userName,
+    captchaId,
+    captchaAnswer,
+    website,
     setSuccess,
     setMailError,
     setErrorCount,
@@ -24,75 +19,85 @@ export default function useMailSubmission({
     setMessage,
     setContact,
     setUserName,
+    setCaptchaAnswer,
 }) {
 
-    // Get URL for fetching
-    const EmailURL = import.meta.env.VITE_EMAIL_URL;
-    // STATES
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    const EmailURL = import.meta.env.VITE_EMAIL_URL + '/sendContactMail';
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    
     const sendMail = async (e) => {
         e.preventDefault();
-
-        // Start submitting
+        
         setIsSubmitting(true);
-        // Hide button during submission
-        setIsButtonVisible(false);
 
+        setIsButtonVisible(false);
+        
         try {
-            // Make Axios POST request
+
             const response = await axios.post(EmailURL, {
                 subject,
                 message,
                 contact,
                 userName,
+                captchaId,
+                captchaAnswer,
+                website,
             });
+            
+            const { status } = response;
+            const data = response.data || {};
+            const successFlag = data.success ?? (status === 200)
 
-            // Reset form validity state
             if (response.status === 200) {
-                // If successful, set success message
-                setSuccess('Your message was successfully sent!');
-                // Clear any existing error messages
+
+                setSuccess(data.message || 'Your message was successfully sent!')
+
                 setMailError('');
-                // Reset the error count
+
                 setErrorCount(0);
-                // Clear any mail failure
+
                 setMailFail(false);
-                // Clear Form
+
                 setSubject('');
                 setMessage('');
                 setContact('');
                 setUserName('');
+                setCaptchaAnswer('')
 
-                // Redirect to the home page after 4 seconds
                 setTimeout(() => {
                     window.location.href = '/';
                 }, 4000);
             } else {
-                handleFailure();
+                data.message ||
+                    'An error has occurred, please try again.';
+                handleFailure(msg);
             }
         } catch (error) {
             console.error('Error sending mail:', error);
-            handleFailure();
+            const serverMsg =
+                error.response?.data?.message ||
+                'An error has occurred, please try again.';
+            handleFailure(serverMsg);
         } finally {
             setIsSubmitting(false);
         }
     };
-
-    const handleFailure = () => {
-        setMailError('An error has occurred, please try again.');
-        const newErrorCount = (prev) => prev + 1;
-        setErrorCount(newErrorCount);
-
-        if (newErrorCount < 3) {
-            setIsButtonVisible(true);
-        } else {
-            setMailFail(true);
-        }
-
-        // Clear success messages
-        setSuccess('');
+    
+    const handleFailure = (message) => {
+        setMailError(message);
+        setSuccess('')
+        
+        setErrorCount((prev) => {
+            const next = prev + 1
+            if (next < 3) {
+                setIsButtonVisible(true)
+            } else {
+                setMailFail(true)
+            }
+            return next
+        })
     };
-
+    
     return { sendMail, isSubmitting };
-}
+};

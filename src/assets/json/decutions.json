@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "tag": "single",
+        "age": "Under 65",
+        "standard": "",
+        "additional": "",
+        "bonus": "",
+        "total": "",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "tag": "single",
+        "age": "65+",
+        "standard": "15,750",
+        "additional": "2,000",
+        "bonus": "6,000",
+        "total": "23,7000",
+        "isActive": true
+    },
+    {
+        "id": 1,
+        "tag": "married",
+        "age": "Both under 65",
+        "standard": "31,500",
+        "additional": "",
+        "bonus": "",
+        "total": "",
+        "isActive": true
+    },
+    {
+        "id": 1,
+        "tag": "married",
+        "age": "One is under 65",
+        "standard": "33,100",
+        "additional": "",
+        "bonus": "",
+        "total": "",
+        "isActive": true
+    },
+    {
+        "id": 1,
+        "tag": "married",
+        "age": "Both 65+",
+        "standard": "31,500",
+        "additional": "3,200",
+        "bonus": "12,000",
+        "total": "46,700",
+        "isActive": true
+    }
+]

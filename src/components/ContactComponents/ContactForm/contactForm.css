@@ -74,7 +74,7 @@
                 }
                 
                 &:not(:valid)&:not(:placeholder-shown) {
-                    border: 3px solid red;
+                    border: 3px solid var(--red);
                 }
                 
                 &:not(:placeholder-shown) + .label_line,
@@ -121,6 +121,9 @@
             }
             
         }
+        .captcha {
+                margin-top: 5em;
+            }
         
         .form_button_box {
             margin-top: 50px;
@@ -148,10 +151,9 @@
             }
             
             .spinner {
-                
+                height: 1em;
                 font-size: 4rem;
-                color: var(--blue);
-                animation: spin 2s linear infinite;
+                animation: spin 1.5s linear infinite;
             }
         }
     }

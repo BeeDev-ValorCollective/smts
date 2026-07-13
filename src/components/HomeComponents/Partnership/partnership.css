@@ -35,16 +35,16 @@
             
             h3 {
                 text-align: center;
-                border-bottom: 1px solid var(--black);
+                border-bottom: 1px solid var(--red);
                 width: 95%;
                 margin: 0 auto;
             }
             
             li {
                 width: 100%;
+                margin: 8px 0;
                 display: flex;
                 align-items: center;
-                margin: 8px 0;
                 
                 img {
                     height: 75px;

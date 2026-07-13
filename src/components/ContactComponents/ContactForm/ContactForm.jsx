@@ -1,17 +1,13 @@
-// IMPORT REACT MAGIC
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
-// IMPORT STYLES
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 import './contactForm.css';
 
-// IMPORT ICONS
-import { ImSpinner10 } from 'react-icons/im';
+import Spinner from '../../../assets/images/loading_spinner.png'
 
-// IMPORT HOOKS
 import useFormValidation from '../ContactHooks/useFormValidation';
 import useMailSubmission from '../ContactHooks/useMailSubmission';
-
 
 export default function ContactUs() {
     const [subject, setSubject] = useState('');
@@ -25,15 +21,25 @@ export default function ContactUs() {
     const [isButtonVisible, setIsButtonVisible] = useState(true);
     const SupportEmail = import.meta.env.VITE_SUPPORT_EMAIL;
 
+    const [captchaQuestion, setCaptchaQuestion] = useState('');
+    const [captchaId, setCaptchaId] = useState('');
+    const [captchaAnswer, setCaptchaAnswer] = useState('');
+    const [isCaptchaLoading, setIsCaptchaLoading] = useState(false);
+    const [captchaLoadError, setCaptchaLoadError] = useState('');
+    const [website, setWebsite] = useState('')
+    
     // Custom hook for form validation
     const isFormValid = useFormValidation({ userName, subject, message, contact });
-
+    
     // Custom hook for mail submission logic
     const { sendMail, isSubmitting } = useMailSubmission({
         subject,
         message,
         contact,
         userName,
+        captchaId,
+        captchaAnswer,
+        website,
         setSuccess,
         setMailError,
         setErrorCount,
@@ -43,8 +49,38 @@ export default function ContactUs() {
         setMessage,
         setContact,
         setUserName,
+        setCaptchaAnswer,
     });
 
+        useEffect(() => {
+        const fetchCaptcha = async () => {
+            try {
+                setIsCaptchaLoading(true);
+                setCaptchaLoadError('');
+
+                // Adjust base URL if needed
+                const apiBase = import.meta.env.VITE_EMAIL_URL || '';
+                const response = await fetch(`${apiBase}/captcha`);
+                console.log(response)
+                if (!response.ok) {
+                    throw new Error('Failed to load captcha');
+                }
+
+                const data = await response.json(); // { id, question }
+                setCaptchaId(data.id);
+                setCaptchaQuestion(data.question);
+                setCaptchaAnswer('');
+            } catch (err) {
+                console.error('Error loading captcha:', err);
+                setCaptchaLoadError('Unable to load spam protection. Please try again.');
+            } finally {
+                setIsCaptchaLoading(false);
+            }
+        };
+
+        fetchCaptcha();
+    }, []);
+    
     return (
         <div className="contact_container">
             {/* FORM SECTION */}
@@ -119,11 +155,45 @@ export default function ContactUs() {
                     </label>
                 </div>
                 {/* END CLIENT MESSAGE */}
+
+                {/* HONEYPOT FIELD (hidden from humans, visible to bots) */}
+                <input
+                    type="text"
+                    name="website"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                    autoComplete="off"
+                    style={{ display: 'none' }}
+                    tabIndex={-1}
+                />
+                {/* END HONEYPOT FIELD */}
+                {/* CAPTCHA FIELD */}
+                <div className="entry_area captcha">
+                    <label className="label_line" htmlFor="captchaAnswer">
+                        {isCaptchaLoading
+                            ? 'Loading spam protection...'
+                            : captchaQuestion || 'Spam protection'}
+                    </label>
+                    <input
+                        name="captchaAnswer"
+                        type="text"
+                        id="captchaAnswer"
+                        required
+                        value={captchaAnswer}
+                        onChange={(e) => setCaptchaAnswer(e.target.value)}
+                        placeholder="" // Leave blank!!
+                        disabled={isCaptchaLoading || !captchaId}
+                    />
+                    {captchaLoadError && (
+                        <p className="captcha_error">{captchaLoadError}</p>
+                    )}
+                </div>
+                {/* CAPTCHA FIELD */}
                 {/* SUBMIT BUTTON AND SPINNER */}
                 {isSubmitting ? (
                     <div className="form_button_box">
                         {!mailError && !mailFail && !success ? (
-                            <ImSpinner10 className="spinner" />
+                            <img src={ Spinner } alt="Spinner Icon" className="spinner"/>
                         ) : (
                             <>&nbsp;</>
                         )}
@@ -132,7 +202,7 @@ export default function ContactUs() {
                 {!isSubmitting && (
                     <div className="form_button_box">
                         <button hidden={!isButtonVisible} type="submit" disabled={!isFormValid}>
-                            Submit
+                            SUBMIT
                         </button>
                     </div>
                 )}
@@ -171,4 +241,4 @@ export default function ContactUs() {
             {/* FORM SECTION */}
         </div>
     );
-}
+};

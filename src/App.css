@@ -21,6 +21,7 @@ html, body, * {
   padding: 0px;
   border: 0px;
   font-family: 'Poppins', sans-serif;
+  font-display: swap;
   word-spacing: .097rem;
   list-style-type: none;
   text-decoration: none;
@@ -50,7 +51,7 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 0px auto;
@@ -59,11 +60,10 @@ main {
 }
 
 
-
 /*                        */
 /* STANDARDIZE FONT SIZES */
 /*                        */
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, li {
   transition: all 300ms ease;
   color: var(--black);
 }
@@ -74,6 +74,9 @@ h3 { font-size: 1.1rem; }
 h4 { font-size: 1.0rem; }
 h5 { font-size: 0.9rem; }
 p { font-size: 0.85rem; }
+li { font-size: 0.85rem; }
+th { font-size: .9rem; }
+td { font-size: .85rem; }
 
 a {
   font-size: 0.85rem;
@@ -92,6 +95,9 @@ a {
   h5 { font-size: 1rem; }
   p { font-size: 1.1rem; }
   a { font-size: 1.1rem; }
+  li { font-size: 1.1rem; }
+  th { font-size: 1.125rem; }
+  td { font-size: 1.1rem; }
 }
 
 /* SCREEN SIZES ABOVE 1200 */
@@ -102,6 +108,9 @@ a {
   h4 { font-size: 1.295rem; }
   p { font-size: 1.265rem; }
   a { font-size: 1.265rem; }
+  li { font-size: 1.265rem; }
+  th { font-size: 1.295rem; }
+  td { font-size: 1.265rem; }
 }
 /*                            */
 /* END STANDARDIZE FONT SIZES */
@@ -173,6 +182,7 @@ nav {
       
       a {
         color: var(--white);
+        word-spacing: normal;
         
         &:hover {
           color: red;
@@ -194,7 +204,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1020px) {
   .nav_header br {
     display: none !important; 
   }
@@ -248,7 +258,7 @@ footer {
       }
     }
     
-    ul:nth-child(3) {
+    ul:nth-child(3), ul:nth-child(4) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -258,15 +268,26 @@ footer {
         line-height: 100%;
         
         p {
-          color: var(--red);
+          color: var(--white);
           font-size: 0.8rem;
           vertical-align: middle;
           font-weight: bold;
+          position: relative;
+          top: 1px;
         }
         
         a {
           font-size: 1rem;
         }
+      }
+    }
+
+    ul:nth-child(4) li {
+      p {
+        font-size: 0.6rem;
+      }
+      a {
+        font-size: 0.7rem;
       }
     }
     
@@ -302,6 +323,33 @@ footer {
     display: none;
   }
 }
-  /*                   */
-  /* END FOOTER STYLES */
-  /*                   */
+/*                   */
+/* END FOOTER STYLES */
+/*                   */
+
+
+
+/*                      */
+/*   SCROLL BAR STYLE   */
+/*                      */
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-left: thin solid black;
+  min-height: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: blue;
+}
+/*                          */
+/*   END SCROLL BAR STYLE   */
+/*                          */

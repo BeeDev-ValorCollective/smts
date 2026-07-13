@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "tidbit_title": "Have you heard?",
+        "tidbit_desc": "The government took away your opportunity to file your taxes using the IRS Direct Filing System. Although the program was growing, the decision makers stated that it was not cost effective. Additionally, there are other opportunities available to taxpayers to file their taxes for free.",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "tidbit_title": "Ghost Preparer",
+        "tidbit_desc": "This person is charging you to prepare your tax return, but he or she will not sign your tax return. Without a signature, the ghost preparer may think that he/she is safe from the IRS. Not true. In some cases, the IRS will mail letters to the taxpayers and ascertain why there is no ID number or preparer signature on your return. Be prepared to give IRS an explanation.",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "tidbit_title": "Have you heard?",
+        "tidbit_desc": "Your Medicare Part B premium is $202.90 next year.",
+        "isActive": true
+    },
+    {
+        "id": 4,
+        "tidbit_title": "More good news!",
+        "tidbit_desc": "Your social security COLA is 2.8%...around $56.00 more added to your social security payments each month.  Veterans that are receiving disability compensation, you are also getting a 2.8% COLA.\nTax refunds in form of check are obsolete. If you are still “old school” it will be to your advantage to have not only your tax refund, but any payments direct deposited into your checking and savings accounts.",
+        "isActive": true
+    },
+    {
+        "id": 5,
+        "tidbit_title": "Cryptocurrency!",
+        "tidbit_desc": "Digital assets. If you sold or will sell digital currency through a brokerage account, be on the lookout for Form 1099-DA by February 17, 2026. You must report the information on your tax return. If you do not, expect to get a letter from the IRS advising you that your tax return was adjusted because the income was not reported on Form 1040/Form 1040-SR.\nAre you required to pay the IRS after your tax return is filed?  If you do not have more taxes withheld from your income, then simply make quarterly estimated tax payments. You have one chance remaining to make that payment and it must be done no later than January 15, 2026. ",
+        "isActive": true
+    },
+    {
+        "id": 6,
+        "tidbit_title": "Congratulation Gamblers",
+        "tidbit_desc": "All winnings are taxable.  You must itemize to take the deduction to offset your income. Good luck. Most seniors cannot itemize because their standard deduction is higher. ",
+        "isActive": true
+    },
+    {
+        "id": 7,
+        "tidbit_title": "",
+        "tidbit_desc": "",
+        "isActive": false
+    },
+    {
+        "id": 8,
+        "tidbit_title": "",
+        "tidbit_desc": "",
+        "isActive": false
+    },
+    {
+        "id": 9,
+        "tidbit_title": "",
+        "tidbit_desc": "",
+        "isActive": false
+    }
+]
